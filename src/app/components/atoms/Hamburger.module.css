@@ -1,0 +1,46 @@
+.hamburgerMenu {
+    display: flex;
+}
+
+@media screen and (min-width: 1000px) {
+    .hamburgerMenu {
+        display: none;
+    }
+    
+}
+
+.hamburgerButton {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px; 
+    height: 32px; 
+    background-color: transparent;
+}
+
+.hamburgerLine {
+    position: absolute;
+    width: 24px; /* width of the lines */
+    height: 3px; /* height of the lines */
+    background-color: white;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center;
+}
+
+/* Additional classes for line positions */
+.hamburgerLineTop {
+    transform: translateY(-8px); /* position the top line */
+}
+
+.hamburgerLineTop.open {
+    transform: rotate(45deg); /* rotate on open */
+}
+
+.hamburgerLineBottom {
+    transform: translateY(8px); /* position the bottom line */
+}
+
+.hamburgerLineBottom.open {
+    transform: rotate(-45deg); /* rotate on open */
+}

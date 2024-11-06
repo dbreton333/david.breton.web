@@ -1,0 +1,48 @@
+
+
+.header {
+    color: white;
+    text-align: center;
+    height: 96px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list_items {
+    display: flex;
+    color: white;
+    font-family: var(--font-space-grotesk);
+    font-size: 24px;
+}
+
+@media screen and (max-width: 1000px) {
+    .list_items {
+        display: none;
+    }
+}
+
+.item{
+    margin-right: 15px;
+    margin-left: 15px;
+    color: white;
+    font-weight: 300;
+}
+
+.item:hover {
+    color: rgb(209 213 219);
+}
+
+.selected_item {
+    margin-right: 15px;
+    margin-left: 15px;
+    font-weight: 700;
+}
+
+.logo {
+    display: flex;
+    height: 100%;
+    width: 200px;
+    position: relative;
+}
