@@ -1,3 +1,4 @@
+import SchoolSection from "./molecules/SchoolSection";
 import styles from "./EducationSection.module.css";
 
 
@@ -14,19 +15,38 @@ const EducationSection = () => {
             </div>
             <div className={styles.sub_header}>
                 <h2 className={`h2 font-sem-bold`}>
-                    Past education <br />
-                    & diplomas
+                    Past education & diplomas
                 </h2>
             </div>
             <div className={`${styles.devider}`}/>
 
             <div className={styles.education_content}>
                 <div className={styles.left_content}>
-                    
+                    <SchoolSection schoolName="MCGILL UNIVERSITY" 
+                    date="DEC 2024" topic="B.Eng. Computer Engineering" 
+                    paragraph="I am currently pursuing a Bachelor's degree in 
+                    Computer Engineering at McGill University. I have taken courses 
+                    in computer science, electrical engineering, and mathematics."/>
+                    <div className={`${styles.vertical_devider}`}/>
+                    <SchoolSection schoolName="MCGILL UNIVERSITY" 
+                    date="DEC 2024" topic="B.Eng. Computer Engineering" 
+                    paragraph="I am currently pursuing a Bachelor's degree in 
+                    Computer Engineering at McGill University. I have taken courses 
+                    in computer science, electrical engineering, and mathematics."/>
                 </div>
-
+                <div className={`${styles.horizontal_devider}`}/>
                 <div className={styles.right_content}>
-                    
+                    <SchoolSection schoolName="MCGILL UNIVERSITY" 
+                        date="DEC 2024" topic="B.Eng. Computer Engineering" 
+                        paragraph="I am currently pursuing a Bachelor's degree in 
+                        Computer Engineering at McGill University. I have taken courses 
+                        in computer science, electrical engineering, and mathematics."/>
+                    <div className={`${styles.vertical_devider}`}/>
+                    <SchoolSection schoolName="MCGILL UNIVERSITY" 
+                        date="DEC 2024" topic="B.Eng. Computer Engineering" 
+                        paragraph="I am currently pursuing a Bachelor's degree in 
+                        Computer Engineering at McGill University. I have taken courses 
+                        in computer science, electrical engineering, and mathematics."/>
                 </div>
             </div>
         </div>

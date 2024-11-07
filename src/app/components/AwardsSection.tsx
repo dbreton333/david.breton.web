@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useRef, useState } from "react";
-import LinkButton from "./atoms/LinkButton";
+import LinkButton from "./molecules/LinkButton";
 import styles from "./AwardsSection.module.css";
 
 

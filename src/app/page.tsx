@@ -6,6 +6,7 @@ import CarouselSection from "./components/CarouselSection";
 import EducationSection from "./components/EducationSection";
 
 export default function Home() {
+  
   return (
     <div className={styles.main}>
       <div className={styles.container}>
