@@ -64,8 +64,7 @@ const AwardsSection = () => {
             <div className={styles.information}>
                 <div className={styles.left_content}>
                     <h1 className={`font-bold h2`}>
-                        I love <br></br>
-                        Competitions
+                        My Competition Career
                     </h1>
                     <p className={`${styles.paragraph} font-light h6`}>
                     I encourage any enthusiastic programmer to dive into these competitions, 

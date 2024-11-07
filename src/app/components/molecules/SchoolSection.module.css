@@ -1,6 +1,12 @@
 .title {
     display: flex;
     flex-direction: row;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.slash {
+    color: #075FE4;
 }
 
 .school_section {
@@ -9,5 +15,16 @@
     align-items: flex-start;
     justify-content: flex-start;
     padding: 40px;
-    height: 49%;
+    border-width: 1px;
+}
+
+.topic {
+    padding-bottom: 10px;
+}
+.date {
+    color: rgb(209 213 219);
+}
+
+.paragraph {
+     color: #E4E7EC;
 }

@@ -4,9 +4,10 @@ import Introduction from "./components/IntroductionSection";
 import AwardsSection from "./components/AwardsSection";
 import CarouselSection from "./components/CarouselSection";
 import EducationSection from "./components/EducationSection";
+import ExperienceSection from "./components/ExperienceSection";
 
 export default function Home() {
-  
+
   return (
     <div className={styles.main}>
       <div className={styles.container}>
@@ -19,6 +20,9 @@ export default function Home() {
       <CarouselSection/>
       <div className={styles.container}>
         <EducationSection/>   
+      </div>
+      <div className={styles.second_container}>
+        <ExperienceSection/>
       </div>
     </div>  
   );
