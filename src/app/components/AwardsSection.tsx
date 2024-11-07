@@ -73,14 +73,14 @@ const AwardsSection = () => {
                     and challenges.
                     </p>
                     <div className={styles.link_button_frame}>
-                        <LinkButton href="/awards" text="MORE ABOUT MY AWARDS " textSize='h5' arrowSize={30}/>
+                        <LinkButton href="/awards" text="More about my awards " textSize='h5' arrowSize={30}/>
                     </div>
                 </div>
 
                 <div className={styles.right_content}>
                     <div className={styles.award_count}>
                         <div className={styles.podiums}>
-                            <AnimatedCounter targetNumber={5} colorClass={styles.podiums_nbr}/>
+                            <AnimatedCounter targetNumber={6} colorClass={styles.podiums_nbr}/>
                             <p className={`h5`}>
                             &nbsp;&nbsp;Podiums
                             </p>

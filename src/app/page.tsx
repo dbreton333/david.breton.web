@@ -3,6 +3,7 @@ import HeaderV1 from "./components/HeaderV1";
 import Introduction from "./components/IntroductionSection";
 import AwardsSection from "./components/AwardsSection";
 import CarouselSection from "./components/CarouselSection";
+import EducationSection from "./components/EducationSection";
 
 export default function Home() {
   return (
@@ -15,6 +16,9 @@ export default function Home() {
         <AwardsSection/>
       </div>
       <CarouselSection/>
+      <div className={styles.container}>
+        <EducationSection/>   
+      </div>
     </div>  
   );
 }

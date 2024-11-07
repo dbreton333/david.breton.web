@@ -41,7 +41,7 @@ const Introduction = () => {
               I'm <span>{myname}</span>
             </h1>
             <p className={`${showParagraph ? styles.fade_in :styles.hide }  ${styles.paragraph} font-light h6`}>
-              As a dynamic Computer Engineer with a strong  background in computer science competitions 
+              As a dynamic Computer Engineer with a strong  background in computer science competitions, 
               active committee  involvement, and a diverse portfolio of software projects, 
               I've honed my skills as a proficient problem solver, full-stack developer, and  
               effective leader.
