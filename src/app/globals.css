@@ -89,11 +89,11 @@ a {
     font-size: 14px;
     line-height: 28px;
   }
-  .h6 {
+  .p {
     font-size: 12px;
     line-height: 22px;
   }
-  .h7 {
+  .sub {
     font-size: 14px;
     line-height: 28px;
   }
@@ -135,11 +135,11 @@ a {
     font-size: 18px;
     line-height: 30px;
   }
-  .h6 {
+  .p {
     font-size: 14px;
     line-height: 28px;
   }
-  .h7 {
+  .sub {
     font-size: 14px;
     line-height: 28px;
   }
@@ -182,11 +182,11 @@ a {
     font-size: 18px;
     line-height: 30px;
   }
-  .h6 {
+  .p {
     font-size: 14px;
     line-height: 28px;
   }
-  .h7 {
+  .sub {
     font-size: 14px;
     line-height: 28px;
   }
@@ -227,11 +227,11 @@ a {
     font-size: 28px;
     line-height: 34px;
   }
-  .h6 {
+  .p {
     font-size: 18px;
     line-height: 30px;
   }
-  .h7 {
+  .sub {
     font-size: 14px;
     line-height: 28px;
   }
@@ -241,11 +241,52 @@ a {
   }
 }
 
-@media (min-width: 1824px) {
+@media (min-width: 1824px) and (max-width: 2224px) {
   /* Large screens */
   .height_intro {
     min-height: 800px;
     max-height: 1000px;
+  }
+
+  .huge {
+    font-size: 122px;
+    line-height: 120px;
+  }
+  .h1 {
+    font-size: 84px;
+    line-height: 94px;
+  }
+  .h2 {
+    font-size: 58px;
+    line-height: 68px;
+  } 
+  .h3 {
+    font-size: 54px;
+    line-height: 64px;
+  }
+  .h4 {
+    font-size: 45px;
+    line-height: 55px;
+  }
+  .h5 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .p {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .sub {
+    font-size: 26px;
+    line-height: 36px;
+  }
+}
+
+@media (min-width: 2224px) {
+  /* Large screens */
+  .height_intro {
+    min-height: 800px;
+    max-height: 1300px;
   }
 
   .huge {
@@ -272,18 +313,16 @@ a {
     font-size: 35px;
     line-height: 45px;
   }
-  .h6 {
+  .p {
     font-size: 28px;
     line-height: 38px;
   }
-  .h7 {
+  .sub {
     font-size: 26px;
     line-height: 36px;
   }
-  .h8 {
-    font-size: 20px;
-    line-height: 28px;
-  }
 }
+
+
 
 

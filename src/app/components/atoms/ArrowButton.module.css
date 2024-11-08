@@ -1,0 +1,32 @@
+.navButton {
+    width: 100px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin: 10px
+}
+
+.navButton_right {
+    background-color: #075FE4;
+}
+
+.navButton_left {
+    background-color: #2D343F;
+}
+
+
+.navButton_right:not(:disabled):hover {
+    background-color: #093476;
+}
+
+.navButton_left:not(:disabled):hover {
+    background-color: #21262e;
+}
+
+.icon {
+    width: 30%;
+    aspect-ratio: 1;
+    position: relative;
+}

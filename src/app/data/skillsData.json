@@ -1,0 +1,40 @@
+{
+    "skills": [
+        {
+            "skill": "HTML & CSS",
+            "icon": "/icons/html.png",
+            "skill_info": "This website and my time at bodycad",
+            "alt": "CSS3"
+        },
+        {
+            "skill": "React Native",
+            "icon": "/icons/html.png",
+            "skill_info": "I have experience with CSS3 and SASS.",
+            "alt": "CSS3"
+        },
+        {
+            "skill": "TypeScript",
+            "icon": "/icons/html.png",
+            "skill_info": "I have experience with CSS3 and SASS.f ewfwefefew fwefwefwef eerfwefwefwef wefwefw",
+            "alt": "CSS3"
+        },
+        {
+            "skill": "JavaScript",
+            "icon": "/icons/html.png",
+            "skill_info": "I have experience with CSS3 and SASS.",
+            "alt": "CSS3"
+        },
+        {
+            "skill": "5",
+            "icon": "/icons/html.png",
+            "skill_info": "I have experience with CSS3 and SASS.",
+            "alt": "CSS3"
+        },
+        {
+            "skill": "6",
+            "icon": "/icons/html.png",
+            "skill_info": "I have experience with CSS3 and SASS.",
+            "alt": "CSS3"
+        }
+    ]
+}

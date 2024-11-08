@@ -4,11 +4,11 @@ import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from './HeaderV1.module.css';
+import styles from './NavBar.module.css';
 import HamburgerMenu from './atoms/Hamburger';
 
 
-const HeaderV1 = () => {
+const NavBar = () => {
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => setIsOpen(!isOpen);
@@ -49,4 +49,4 @@ const HeaderV1 = () => {
     );
 }
 
-export default HeaderV1;
+export default NavBar;

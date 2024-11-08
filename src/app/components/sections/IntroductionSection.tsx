@@ -3,7 +3,7 @@ import { useState, useEffect, useMemo } from 'react';
 import compStyles from './components.module.css';
 import styles from './IntroductionSection.module.css';
 import Image from 'next/image';
-import LinkButton from './molecules/LinkButton';
+import LinkButton from '../atoms/LinkButton';
 import Link from 'next/link';
 
 const useTypewriter = (text: string, speed = 20, postEffect: any) => {
@@ -41,17 +41,17 @@ const Introduction = () => {
                 Nice to meet you, <br/>
                 I'm <span>{myname}</span>
               </h1>
-              <p className={`${showParagraph ? styles.fade_in :styles.hide }  ${styles.paragraph} font-light h6`}>
+              <p className={`${showParagraph ? styles.fade_in :styles.hide }  ${styles.paragraph} font-light p`}>
                 As a dynamic Computer Engineer with a strong  background in computer science competitions, 
                 active committee  involvement, and a diverse portfolio of software projects, 
                 I've honed my skills as a proficient problem solver, full-stack developer, and  
                 effective leader.
               </p>
               <div className={`${showParagraph ? styles.fade_in :styles.hide } ${styles.link_button_frame}`}>
-                <LinkButton href="/about" text="Learn more about me" textSize='h6' arrowSize={20}/>
+                <LinkButton href="/about" text="Learn more about me" textSize='p' arrowSize={20}/>
               </div>
               <div className={ `${showParagraph ? styles.fade_in :styles.hide } ${styles.devider}`}/>
-              <h1 className={`${showParagraph ? styles.fade_in :styles.hide } ${styles.paragraph} font-bold h7`}>
+              <h1 className={`${showParagraph ? styles.fade_in :styles.hide } ${styles.paragraph} font-bold sub`}>
                 FOLLOW ME
               </h1>
               <div className={` ${showParagraph ? styles.fade_in :styles.hide } ${styles.social_media}`}>

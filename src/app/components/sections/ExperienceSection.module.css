@@ -1,0 +1,38 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    padding-top: 8%;
+    padding-bottom: 8%;
+}
+
+.slash {
+    color: #075FE4;
+}
+
+.title_devider {
+    height: 1px;
+    width: 100%;
+    background-color: #5D6C83;
+    margin-top: 40px;
+}
+
+
+
+.devider {
+    height: 1px;
+    width: 100%;
+    background-color: #5D6C83;
+}
+
+
+.experience_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}

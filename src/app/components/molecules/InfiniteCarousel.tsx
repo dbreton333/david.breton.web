@@ -10,8 +10,8 @@ const images = [
   '/images/genium-logo.png',
 ];
 
-import styles from './CarouselSection.module.css';
-const CarouselSection = () => {
+import styles from './InfiniteCarousel.module.css';
+const InfiniteCarousel = () => {
     return (
     <div className={styles.slider}>
     <div className={styles.slide_track}>
@@ -62,4 +62,4 @@ const CarouselSection = () => {
     )
 }
 
-export default CarouselSection;
+export default InfiniteCarousel;

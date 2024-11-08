@@ -1,12 +1,12 @@
 import Image from "next/image";
 import styles from "../page.module.css";
-import HeaderV1 from "../components/HeaderV1";
+import NavBar from "../components/NavBar";
 
 export default function Awards() {
   return (
     <div className={styles.main}>
       <div className={styles.container}>
-          <HeaderV1/>   
+          <NavBar/>   
       </div> 
     </div>  
   );

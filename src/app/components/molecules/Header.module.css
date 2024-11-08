@@ -1,12 +1,10 @@
-.content {
+.header_content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
     height: 100%;
     width: 100%;
-    padding-top: 8%;
-    padding-bottom: 8%;
 }
 
 .header {
@@ -19,7 +17,7 @@
 }
 
 .sub_header {
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -30,9 +28,14 @@
     color: #075FE4;
 }
 
+
 .devider {
     height: 1px;
     width: 100%;
-    margin-top: 50px;
     background-color: #5D6C83;
+    margin-top: 40px;
+}
+
+.devider.hidden {
+    display: none;
 }

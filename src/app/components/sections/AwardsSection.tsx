@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useRef, useState } from "react";
-import LinkButton from "./molecules/LinkButton";
+import LinkButton from "../atoms/LinkButton";
 import styles from "./AwardsSection.module.css";
 
 
@@ -66,7 +66,7 @@ const AwardsSection = () => {
                     <h1 className={`font-bold h2`}>
                         My Competition Career
                     </h1>
-                    <p className={`${styles.paragraph} font-light h6`}>
+                    <p className={`${styles.paragraph} font-light p`}>
                     I encourage any enthusiastic programmer to dive into these competitions, 
                     as I truly believe there’s no better way to prepare for real-life problems 
                     and challenges.
@@ -91,7 +91,7 @@ const AwardsSection = () => {
                             </p>
                         </div>
                     </div>
-                    <p className={`${styles.paragraph} font-light h6`}>
+                    <p className={`${styles.paragraph} font-light p`}>
                     I'm proud to conclude my competitive programming career with a total of 6 titles, 
                     including podiums at the Computer Science Games,  McGill Engineering Competition, 
                     Quebec Engineering Competition, Canadian Engineering Competition and two at the 

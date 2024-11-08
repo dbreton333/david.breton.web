@@ -1,28 +1,32 @@
 import styles from "./page.module.css";
-import HeaderV1 from "./components/HeaderV1";
-import Introduction from "./components/IntroductionSection";
-import AwardsSection from "./components/AwardsSection";
-import CarouselSection from "./components/CarouselSection";
-import EducationSection from "./components/EducationSection";
-import ExperienceSection from "./components/ExperienceSection";
+import NavBar from "./components/NavBar";
+import Introduction from "./components/sections/IntroductionSection";
+import AwardsSection from "./components/sections/AwardsSection";
+import InfiniteCarousel from "./components/molecules/InfiniteCarousel";
+import EducationSection from "./components/sections/EducationSection";
+import ExperienceSection from "./components/sections/ExperienceSection";
+import SkillSection from "./components/sections/SkillSection";
 
 export default function Home() {
 
   return (
     <div className={styles.main}>
       <div className={styles.container}>
-        <HeaderV1/>   
+        <NavBar/>
         <Introduction/>
       </div>
       <div className={styles.second_container}>
         <AwardsSection/>
       </div>
-      <CarouselSection/>
+      <InfiniteCarousel/>
       <div className={styles.container}>
         <EducationSection/>   
       </div>
       <div className={styles.second_container}>
         <ExperienceSection/>
+      </div>
+      <div className={styles.container}>
+        <SkillSection/>
       </div>
     </div>  
   );
