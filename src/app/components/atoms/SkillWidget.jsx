@@ -2,10 +2,9 @@
 import styles from "./SkillWidget.module.css";
 import Image from "next/image";
 
-
-const SkillWidget = ({index, item}) => {
+const SkillWidget = ({ item, itemsPerView }) => {
     return (
-        <div className={styles.skill_widget_container} key={index}>
+        <div className={styles.skill_widget_container}>
             <div className={styles.skill_widget}>
                 <div className={styles.icon}>
                     <Image src={item.icon} alt={item.alt} fill={true} />
@@ -19,7 +18,6 @@ const SkillWidget = ({index, item}) => {
             </div>
         </div>
     );
-
-}
+};
 
 export default SkillWidget;
