@@ -9,9 +9,9 @@ const SkillsCarousel = ({ skills }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const updateItemsPerView = () => {
-        if (window.innerWidth >= 1200) {
+        if (window.innerWidth >= 1000) {
             setItemsPerView(3); // Desktop
-        } else if (window.innerWidth >= 768) {
+        } else if (window.innerWidth >= 700) {
             setItemsPerView(2); // Tablet
         } else {
             setItemsPerView(1); // Mobile
@@ -43,7 +43,6 @@ const SkillsCarousel = ({ skills }) => {
                 <div className={styles.carouselTrack}
                     style={{
                         transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`,
-                        width: `${100 * skills.length / itemsPerView}%`
                     }}>
                     {skills.map((item, index) => (
                         <SkillWidget key={index} item={item} itemsPerView={itemsPerView} />
