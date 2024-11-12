@@ -47,7 +47,7 @@ const SchoolSection = (props: SchoolSectionProps) => {
                 <h1 className={`${styles.date} h6`}>{props.date}</h1>
             </div>
             <h2 className={`${styles.topic} h5`}>{props.topic}</h2>
-            <h2 className={`${styles.paragraph} h8 font-light`}>{props.paragraph}</h2>
+            <h2 className={`${styles.paragraph} p font-light`}>{props.paragraph}</h2>
         </div>
     );
 };

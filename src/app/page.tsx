@@ -6,6 +6,7 @@ import InfiniteCarousel from "./components/molecules/InfiniteCarousel";
 import EducationSection from "./components/sections/EducationSection";
 import ExperienceSection from "./components/sections/ExperienceSection";
 import SkillSection from "./components/sections/SkillSection";
+import Footer from "./components/Footer";
 
 export default function Home() {
 
@@ -27,6 +28,9 @@ export default function Home() {
       </div>
       <div className={styles.container}>
         <SkillSection/>
+      </div>
+      <div className={styles.container}>
+        <Footer/>
       </div>
     </div>  
   );

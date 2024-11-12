@@ -1,0 +1,162 @@
+.general_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+.left_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100%;
+    width: 50%;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+.image_content {
+    width: 20%;
+    aspect-ratio: 1;
+    position: relative;
+    max-width: 200px;
+    margin: 2%;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100%;
+    width: 80%;
+}
+
+.name {
+    padding: 2%;
+    width: 100%;
+}
+
+.sub_name {
+    padding-left: 2%;
+    width: 100%;
+    color: #C3CAD5;
+}
+
+.social_media {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 100px;
+    width: 15%;
+    aspect-ratio: 4;
+}
+
+.social_media_icon {
+    height: 100%;
+    aspect-ratio: 1;
+    position: relative;
+}
+
+
+
+.right_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100%;
+    width: 50%;
+}
+
+.contact{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.footer_nav {
+    text-align: center;
+    height: 96px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.devider {
+    height: 1px;
+    width: 100%;
+    background-color: #5D6C83;
+}
+
+.placeholder {
+    display: flex;
+    width: 1%;
+    height: 100%;
+}
+
+.logo {
+    display: flex;
+    height: 100%;
+    width: 200px;
+    position: relative;
+}
+
+.list_items {
+    display: flex;
+    color: white;
+    font-family: var(--font-space-grotesk);
+    font-size: 24px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .list_items {
+        display: none;
+    }
+}
+
+.item{
+    margin-right: 15px;
+    margin-left: 15px;
+    color: white;
+    font-weight: 300;
+}
+
+.item:hover {
+    color: rgb(209 213 219);
+}
+
+.selected_item {
+    margin-right: 15px;
+    margin-left: 15px;
+    font-weight: 700;
+}
+
+
+
+
+

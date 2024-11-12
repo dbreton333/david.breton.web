@@ -12,7 +12,7 @@ const SkillWidget = ({ item, itemsPerView }) => {
                 <h2 className={`h2 font-sem-bold`}>
                     {item.skill}
                 </h2>
-                <p className={`p font-light`}>
+                <p className={`${styles.paragraph} p font-light`}>
                     {item.skill_info}
                 </p>
             </div>

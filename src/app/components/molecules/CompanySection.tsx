@@ -62,7 +62,7 @@ const CompanySection = (props: ExperienceSectionProps) => {
                         <h2 className={`${styles.date} p`}> {props.EndingDate}</h2>
                     </div>
                 </div>
-                <p className={`${styles.paragraph} h8 font-light`}>
+                <p className={`${styles.paragraph} p font-light`}>
                  {props.paragraph}   
                 </p>
             </div>
