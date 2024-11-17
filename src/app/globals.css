@@ -64,6 +64,12 @@ a {
     min-height: 800px;
     max-height: 2000px;
   }
+
+  .height_outro {
+    min-height: 200px;
+    max-height: 300px;
+  }
+
   .huge {
     font-size: 58px;
     line-height: 68px;
@@ -97,8 +103,8 @@ a {
     line-height: 22px;
   }
   .sub {
-    font-size: 14px;
-    line-height: 28px;
+    font-size: 10px;
+    line-height: 20px;
   }
 }
 
@@ -108,6 +114,11 @@ a {
   .height_intro {
     min-height: 800px;
     max-height: 1000px;
+  }
+
+  .height_outro {
+    min-height: 200px;
+    max-height: 500px;
   }
 
   .huge {
@@ -143,8 +154,8 @@ a {
     line-height: 28px;
   }
   .sub {
-    font-size: 14px;
-    line-height: 28px;
+    font-size: 12px;
+    line-height: 20px;
   }
 
 }
@@ -156,6 +167,11 @@ a {
   .height_intro {
     min-height: 600px;
     max-height: 1000px;
+  }
+
+  .height_outro {
+    min-height: 200px;
+    max-height: 600px;
   }
 
   .huge {
@@ -191,8 +207,8 @@ a {
     line-height: 28px;
   }
   .sub {
-    font-size: 14px;
-    line-height: 28px;
+    font-size: 12px;
+    line-height: 20px;
   }
 }
 
@@ -201,6 +217,11 @@ a {
   .height_intro {
     min-height: 700px;
     max-height: 1000px;
+  }
+
+  .height_outro {
+    min-height: 200px;
+    max-height: 600px;
   }
 
   .huge {
@@ -249,6 +270,11 @@ a {
     max-height: 1000px;
   }
 
+  .height_outro {
+    min-height: 200px;
+    max-height: 700px;
+  }
+
   .huge {
     font-size: 122px;
     line-height: 120px;
@@ -292,6 +318,11 @@ a {
   .height_intro {
     min-height: 800px;
     max-height: 1300px;
+  }
+
+  .height_outro {
+    min-height: 200px;
+    max-height: 600px;
   }
 
   .huge {

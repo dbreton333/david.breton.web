@@ -1,40 +1,74 @@
 {
     "skills": [
         {
+            "skill": "React Native",
+            "icon": "/icons/react.png",
+            "skill_info": "Smartess",
+            "number_of_years": "2+",
+            "alt": "React Native"
+        },
+        {
+            "skill": "Algorithms",
+            "icon": "/icons/html.png",
+            "skill_info": "Mcgill - Computer Science Competition",
+            "number_of_years": "5+",
+            "alt": "HTML & CSS"
+        },
+        {
             "skill": "HTML & CSS",
             "icon": "/icons/html.png",
-            "skill_info": "This website and my time at bodycad",
-            "alt": "CSS3"
+            "skill_info": "This website- BodyCad",
+            "number_of_years": "1+",
+            "alt": "HTML & CSS"
         },
         {
-            "skill": "React Native",
+            "skill": "Data Structures",
             "icon": "/icons/html.png",
-            "skill_info": "I have experience with CSS3 and SASS.",
-            "alt": "CSS3"
+            "skill_info": "Mcgill - IEEE - Computer Science Competition",
+            "number_of_years": "5+",
+            "alt": "HTML & CSS"
         },
         {
-            "skill": "TypeScript",
-            "icon": "/icons/html.png",
-            "skill_info": "I have experience with CSS3 and SASS.f ewfwefefew fwefwefwef eerfwefwefwef wefwefw",
-            "alt": "CSS3"
+            "skill": "TS & JS",
+            "icon": "/icons/js.png",
+            "skill_info": "Smartess - This website",
+            "number_of_years": "3+",
+            "alt": "TS & JS"
         },
         {
-            "skill": "JavaScript",
-            "icon": "/icons/html.png",
-            "skill_info": "I have experience with CSS3 and SASS.",
-            "alt": "CSS3"
+            "skill": "React.js",
+            "icon": "/icons/react.png",
+            "skill_info": "This website- BodyCad",
+            "number_of_years": "1+",
+            "alt": "React.js"
         },
         {
-            "skill": "5",
+            "skill": "Python",
             "icon": "/icons/html.png",
-            "skill_info": "I have experience with CSS3 and SASS.",
-            "alt": "CSS3"
+            "skill_info": "Mcgill - LightHouseLabs - Competitions",
+            "number_of_years": "5+",
+            "alt": "Python"
         },
         {
-            "skill": "6",
+            "skill": "Node.js",
+            "icon": "/icons/node_js.png",
+            "skill_info": "Smartess",
+            "number_of_years": "1+",
+            "alt": "Node.js"
+        },
+        {
+            "skill": "Figma",
             "icon": "/icons/html.png",
-            "skill_info": "I have experience with CSS3 and SASS.",
-            "alt": "CSS3"
+            "skill_info": "Smartess - This website - Concordia Capstone Shareholder",
+            "number_of_years": "3+",
+            "alt": "MongoDB"
+        },
+        {
+            "skill": "Data Science",
+            "icon": "/icons/html.png",
+            "skill_info": "Mcgill - LightHouseLabs - Competitions",
+            "number_of_years": "3+",
+            "alt": "MongoDB"
         }
     ]
 }

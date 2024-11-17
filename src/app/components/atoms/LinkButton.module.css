@@ -35,5 +35,6 @@
 }
 
 .link_button:hover .arrow {
-    color: rgb(137, 141, 147);
+    content: url('/icons/arrow_right_hover.svg');
 }
+

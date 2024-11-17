@@ -29,9 +29,7 @@ export default function Home() {
       <div className={styles.container}>
         <SkillSection/>
       </div>
-      <div className={styles.container}>
-        <Footer/>
-      </div>
+      <Footer/>
     </div>  
   );
 }

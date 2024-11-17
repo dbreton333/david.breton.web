@@ -11,55 +11,19 @@ const images = [
 ];
 
 import styles from './InfiniteCarousel.module.css';
+
 const InfiniteCarousel = () => {
     return (
-    <div className={styles.slider}>
-    <div className={styles.slide_track}>
-        <div className={styles.slide}>
-        <img src={images[0]} className={styles.logo} alt="" />
+        <div className={styles.slider}>
+            <div className={styles.slide_track}>
+                {images.concat(images).concat(images).map((image, index) => (
+                    <div className={styles.slide} key={index}>
+                        <img src={image} className={styles.logo} alt="" />
+                    </div>
+                ))}
+            </div>
         </div>
-        <div className={styles.slide}>
-        <img src={images[1]} className={styles.logo} alt="" />
-        </div>
-        <div className={styles.slide}>
-        <img src={images[2]} className={styles.logo} alt="" />
-        </div>
-        <div className={styles.slide}>
-        <img src={images[3]} className={styles.logo} alt="" />
-        </div>
-        <div className={styles.slide}>
-        <img src={images[4]} className={styles.logo} alt="" />
-        </div>
-        <div className={styles.slide}>
-        <img src={images[5]} className={styles.logo} alt="" />
-        </div>
-        <div className={styles.slide}>
-        <img src={images[6]} className={styles.logo} alt="" />
-        </div>
-        <div className={styles.slide}>
-        <img src={images[0]} className={styles.logo} alt="" />
-        </div>
-        <div className={styles.slide}>
-        <img src={images[1]} className={styles.logo} alt="" />
-        </div>
-        <div className={styles.slide}>
-        <img src={images[2]} className={styles.logo} alt="" />
-        </div>
-        <div className={styles.slide}>
-        <img src={images[3]} className={styles.logo} alt="" />
-        </div>
-        <div className={styles.slide}>
-        <img src={images[4]} className={styles.logo} alt="" />
-        </div>
-        <div className={styles.slide}>
-        <img src={images[5]} className={styles.logo} alt="" />
-        </div>
-        <div className={styles.slide}>
-        <img src={images[6]} className={styles.logo} alt="" />
-        </div>
-    </div>
-    </div>
-    )
+    );
 }
 
 export default InfiniteCarousel;

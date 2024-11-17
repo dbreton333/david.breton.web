@@ -11,7 +11,9 @@ const Footer = () => {
     const pathname = usePathname();
 
     return (
-        <footer className={styles.footer}>
+        <footer className={`${styles.footer}`}>
+             <div className={`${styles.devider}`}/>
+            <footer className={`${styles.footer_content} height_outro`}>
             <div className={styles.general_info}>
                 <div className={styles.left_content}>
                 <div className={styles.profile}>
@@ -58,16 +60,16 @@ const Footer = () => {
                 
                 </div>
 
-                <div className={styles.right_content}>
-                    <h1 className='h3'>Get in touch</h1>
+                <div className={`${styles.right_content}`}>
+                    <h1 className={`${styles.title} h3`}>Get in touch</h1>
                     <div className={styles.contact}>
                         <div className={styles.email}>
-                            <h1 className='p'>EMAIL ME:</h1>
-                            <LinkButton href="mailto:" text="davidbreton03@gmail.com" textSize="p" arrowSize={20}/>
+                            <h1 className={`${styles.paragraph} p`}>EMAIL ME:</h1>
+                            <LinkButton href="mailto:" text="davidbreton03@gmail.com" textSize="sub" arrowSize={20}/>
                         </div>
                         <div className={styles.phone}>
-                            <h2 className='p'>CALL ME:</h2>
-                            <LinkButton href="mailto:" text="(514)-452-4102" textSize="p" arrowSize={20}/>
+                            <h2 className={`${styles.paragraph} p`}>CALL ME:</h2>
+                            <LinkButton href="mailto:" text="(514)-452-4102" textSize="sub" arrowSize={20}/>
                         </div>
                     </div>
                 </div>
@@ -106,7 +108,7 @@ const Footer = () => {
                     </Link>
                 </div>
             </div>
-
+        </footer>
         </footer>
     );
 }

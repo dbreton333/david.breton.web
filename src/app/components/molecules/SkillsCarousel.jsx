@@ -9,7 +9,7 @@ const SkillsCarousel = ({ skills }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const updateItemsPerView = () => {
-        if (window.innerWidth >= 1000) {
+        if (window.innerWidth >= 1400) {
             setItemsPerView(3); // Desktop
         } else if (window.innerWidth >= 700) {
             setItemsPerView(2); // Tablet

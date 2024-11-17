@@ -1,11 +1,12 @@
 'use client'
 import { useRef, useState, useEffect } from "react";
-import styles from "./CompanySection.module.css";
+import styles from "./Experience.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
 
 interface ExperienceSectionProps {
+    CompanyName: string,
     CompanyLogo: any,
     StartingDate: string,
     EndingDate: string,
@@ -14,7 +15,7 @@ interface ExperienceSectionProps {
     ref: string
 }
 
-const CompanySection = (props: ExperienceSectionProps) => {
+const Experience = (props: ExperienceSectionProps) => {
 
     const [isVisible, setIsVisible] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
@@ -54,7 +55,7 @@ const CompanySection = (props: ExperienceSectionProps) => {
             <div className={styles.content_frame}>
                 <div className={styles.topic_and_date_frame}>
                     <h1 className={`${styles.topic} h5`}>
-                        {props.topic}
+                        {props.CompanyName} - {props.topic}
                     </h1>
                     <div className={styles.date_frame}>
                         <h2 className={`${styles.date} p`}>{props.StartingDate}</h2>
@@ -71,4 +72,4 @@ const CompanySection = (props: ExperienceSectionProps) => {
     );
 };
 
-export default CompanySection;
+export default Experience;
