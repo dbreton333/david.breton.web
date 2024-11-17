@@ -12,7 +12,7 @@ const Footer = () => {
 
     return (
         <footer className={`${styles.footer}`}>
-             <div className={`${styles.devider}`}/>
+            <div className={`${styles.devider}`}/>
             <footer className={`${styles.footer_content} height_outro`}>
             <div className={styles.general_info}>
                 <div className={styles.left_content}>
