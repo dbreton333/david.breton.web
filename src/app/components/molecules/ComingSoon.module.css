@@ -1,0 +1,19 @@
+.coming_soon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 96px);
+    min-height: 200px;
+    width: 100%;
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 2s forwards; /* Apply the fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

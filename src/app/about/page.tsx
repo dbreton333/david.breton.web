@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "../page.module.css";
 import NavBar from "../components/NavBar";
+import {ComingSoon} from "../components/molecules/ComingSoon";
 
 export default function About() {
   return (
@@ -8,6 +9,7 @@ export default function About() {
       <div className={styles.container}>
           <NavBar/>   
       </div>
+      <ComingSoon/>
     </div>  
   );
 }

@@ -9,7 +9,7 @@
         },
         {
             "skill": "Algorithms",
-            "icon": "/icons/html.png",
+            "icon": "/icons/algo.png",
             "skill_info": "Mcgill - Computer Science Competition",
             "number_of_years": "5+",
             "alt": "HTML & CSS"
@@ -23,7 +23,7 @@
         },
         {
             "skill": "Data Structures",
-            "icon": "/icons/html.png",
+            "icon": "/icons/data.png",
             "skill_info": "Mcgill - IEEE - Computer Science Competition",
             "number_of_years": "5+",
             "alt": "HTML & CSS"
@@ -44,7 +44,7 @@
         },
         {
             "skill": "Python",
-            "icon": "/icons/html.png",
+            "icon": "/icons/python.png",
             "skill_info": "Mcgill - LightHouseLabs - Programming Competitions",
             "number_of_years": "5+",
             "alt": "Python"
@@ -58,21 +58,21 @@
         },
         {
             "skill": "Figma",
-            "icon": "/icons/html.png",
+            "icon": "/icons/figma.png",
             "skill_info": "Smartess - This website - Concordia Capstone Shareholder",
             "number_of_years": "3+",
             "alt": "MongoDB"
         },
         {
             "skill": "Data Science",
-            "icon": "/icons/html.png",
+            "icon": "/icons/data.png",
             "skill_info": "Mcgill - LightHouseLabs - Programming Competitions",
             "number_of_years": "3+",
             "alt": "MongoDB"
         },
         {
             "skill": "C#",
-            "icon": "/icons/html.png",
+            "icon": "/icons/c.png",
             "skill_info": "Inovestor - Brebeuf - Mcgill",
             "number_of_years": "1+",
             "alt": "MongoDB"

@@ -3,11 +3,11 @@
         {
             "CompanyName": "Smartess",
             "CompanyLogo": "/images/smartess.png",
-            "ref": "",
+            "ref": "https://www.linkedin.com/company/smartessca/posts/?feedView=all",
             "StartingDate": "JULY 2022",
             "EndingDate": "DEC 2024",
             "topic": "Freelance Software Developer and Co-Founder",
-            "description": "I was responsible for developping a software that focuses on creating a smart home ecosystem for a client who is a major player in the real estate industry in montreal. My team and I developped a mobile app available both on iOS and Android that allows users to control various aspects of their house or building, such as lighting, temperature, locks and security systems. Our focus was on creating a technology that is easy to install and use, without requiring a lot of technical expertise, with an emphasis on plug-and-play features and pre-automation to make it as simple as possible for the user."
+            "description": "During my tenure at Smartess, I was responsible for developping a software that focuses on creating a smart home ecosystem for a client who is a major player in the real estate industry in montreal. My team and I developped a mobile app available both on iOS and Android that allows users to control various aspects of their house or building, such as lighting, temperature, locks and security systems. Our focus was on creating a technology that is easy to install and use, without requiring a lot of technical expertise, with an emphasis on plug-and-play features and pre-automation to make it as simple as possible for the user.  The solutions has a growing community that will reach above 70 chalets by the end of 2028."
         },
         {
             "CompanyName": "Inovestor",
@@ -16,7 +16,7 @@
             "StartingDate": "MAY 2022",
             "EndingDate": "SEP 2022",
             "topic": "Software Developer Intern",
-            "description": "At BodyCad, I played a key role in automating the supply chain by streamlining the process of label generation for custom implant orders. I also developed a React.js user interface that allows medical professionals to efficiently place orders for BodyCad implants that was directly integrated into the automated label process."
+            "description": "During my tenure at Inovestor, I contributed to the development of several key Core APIs, Initializers, and various data Importers using the .NET Framework. Working with Agile methodologies, I actively participated in bi-weekly sprint reviews, where I presented my progress to the team, provided detailed reports, and engaged in code reviews. Additionally, I spearheaded a project to restructure and update Inovestor's data, which involved transposing historical data from as far back as 2008 to align with a modernized stock nomenclature. This project ensured that Inovestor's data infrastructure was up-to-date, enhancing data accessibility and accuracy across the platform."
         }, {
             "CompanyName": "BodyCad",
             "CompanyLogo": "/images/bodycad.png",
@@ -24,7 +24,7 @@
             "StartingDate": "MAY 2020",
             "EndingDate": "SEP 2020",
             "topic": "Software Engineer Intern",
-            "description": "During my tenure at Inovestor, I contributed to the development of several key Core APIs, an Initializer program, and various data Importers using the .NET Framework. Working within Agile methodologies, I actively participated in bi-weekly sprint reviews, where I presented my progress to the team, provided detailed reports, and engaged in code reviews."
+            "description": "During my tenure at BodyCad, I played a key role in automating the supply chain by streamlining the process of label generation for custom implant orders. I also developed a React.js user interface that allows medical professionals to efficiently place orders for BodyCad implants that was directly integrated into the automated label process."
         },
         {
             "CompanyName": "BRP",
@@ -33,7 +33,7 @@
             "StartingDate": "MAY 2019",
             "EndingDate": "SEP 2019",
             "topic": "3D Modeler Intern",
-            "description": "I utilized CATIA to model components for concept vehicles, contributing to innovative and functional designs in the automotive field. Additionally, I designed and led the implementation of a new solution that significantly improved access to the cooling system of a quad bike, enhancing maintenance efficiency and overall usability."
+            "description": "During my tenure at BRP, I utilized CATIA to model components for concept vehicles, contributing to innovative and functional designs in the automotive field. Additionally, I designed and led the implementation of a new solution that significantly improved access to the cooling system of a quad bike, enhancing maintenance efficiency and overall usability."
         }
     ]
 }
