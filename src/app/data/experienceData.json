@@ -4,28 +4,27 @@
             "CompanyName": "Smartess",
             "CompanyLogo": "/images/smartess.png",
             "ref": "",
-            "StartingDate": "MAY 2021",
-            "EndingDate": "SEP 2021",
+            "StartingDate": "JULY 2022",
+            "EndingDate": "DEC 2024",
             "topic": "Freelance Software Developer and Co-Founder",
             "description": "I was responsible for developping a software that focuses on creating a smart home ecosystem for a client who is a major player in the real estate industry in montreal. My team and I developped a mobile app available both on iOS and Android that allows users to control various aspects of their house or building, such as lighting, temperature, locks and security systems. Our focus was on creating a technology that is easy to install and use, without requiring a lot of technical expertise, with an emphasis on plug-and-play features and pre-automation to make it as simple as possible for the user."
-        },
-        {
-            "CompanyName": "BodyCad",
-            "CompanyLogo": "/images/bodycad.png",
-            "ref": "https://bodycad.com/en-ca/",
-            "StartingDate": "MAY 2022",
-            "EndingDate": "SEP 2022",
-            "topic": "Software Engineer Intern",
-            "description": "During my tenure at Inovestor, I contributed to the development of several key Core APIs, an Initializer program, and various data Importers using the .NET Framework. Working within Agile methodologies, I actively participated in bi-weekly sprint reviews, where I presented my progress to the team, provided detailed reports, and engaged in code reviews."
         },
         {
             "CompanyName": "Inovestor",
             "CompanyLogo": "/images/inovestor.png",
             "ref": "https://www.inovestor.com/en-ca/",
-            "StartingDate": "MAY 2020",
-            "EndingDate": "SEP 2020",
+            "StartingDate": "MAY 2022",
+            "EndingDate": "SEP 2022",
             "topic": "Software Developer Intern",
             "description": "At BodyCad, I played a key role in automating the supply chain by streamlining the process of label generation for custom implant orders. I also developed a React.js user interface that allows medical professionals to efficiently place orders for BodyCad implants that was directly integrated into the automated label process."
+        }, {
+            "CompanyName": "BodyCad",
+            "CompanyLogo": "/images/bodycad.png",
+            "ref": "https://bodycad.com/en-ca/",
+            "StartingDate": "MAY 2020",
+            "EndingDate": "SEP 2020",
+            "topic": "Software Engineer Intern",
+            "description": "During my tenure at Inovestor, I contributed to the development of several key Core APIs, an Initializer program, and various data Importers using the .NET Framework. Working within Agile methodologies, I actively participated in bi-weekly sprint reviews, where I presented my progress to the team, provided detailed reports, and engaged in code reviews."
         },
         {
             "CompanyName": "BRP",

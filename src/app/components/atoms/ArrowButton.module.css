@@ -1,5 +1,6 @@
 .navButton {
-    width: 100px;
+    width: 20%;
+    max-width: 100px;
     aspect-ratio: 1;
     display: flex;
     justify-content: center;
