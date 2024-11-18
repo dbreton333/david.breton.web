@@ -6,17 +6,8 @@
             "ref": "",
             "StartingDate": "MAY 2021",
             "EndingDate": "SEP 2021",
-            "topic": "Software Developer Intern",
-            "description": "I am currently working as a Software Developer at IBM. I am part of the IBM Cloud team, working on the development of the IBM Cloud platform."
-        },
-        {
-            "CompanyName": "BRP",
-            "CompanyLogo": "/images/brp.png",
-            "ref": "https://www.brp.com/en/",
-            "StartingDate": "MAY 2019",
-            "EndingDate": "SEP 2019",
-            "topic": "3D Modeler Intern",
-            "description": "I am currently working as a Software Developer at IBM. I am part of the IBM Cloud team, working on the development of the IBM Cloud platform."
+            "topic": "Freelance Software Developer and Co-Founder",
+            "description": "I was responsible for developping a software that focuses on creating a smart home ecosystem for a client who is a major player in the real estate industry in montreal. My team and I developped a mobile app available both on iOS and Android that allows users to control various aspects of their house or building, such as lighting, temperature, locks and security systems. Our focus was on creating a technology that is easy to install and use, without requiring a lot of technical expertise, with an emphasis on plug-and-play features and pre-automation to make it as simple as possible for the user."
         },
         {
             "CompanyName": "BodyCad",
@@ -35,6 +26,15 @@
             "EndingDate": "SEP 2020",
             "topic": "Software Developer Intern",
             "description": "At BodyCad, I played a key role in automating the supply chain by streamlining the process of label generation for custom implant orders. I also developed a React.js user interface that allows medical professionals to efficiently place orders for BodyCad implants that was directly integrated into the automated label process."
+        },
+        {
+            "CompanyName": "BRP",
+            "CompanyLogo": "/images/brp.png",
+            "ref": "https://www.brp.com/en/",
+            "StartingDate": "MAY 2019",
+            "EndingDate": "SEP 2019",
+            "topic": "3D Modeler Intern",
+            "description": "I utilized CATIA to model components for concept vehicles, contributing to innovative and functional designs in the automotive field. Additionally, I designed and led the implementation of a new solution that significantly improved access to the cooling system of a quad bike, enhancing maintenance efficiency and overall usability."
         }
     ]
 }

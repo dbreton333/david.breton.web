@@ -31,7 +31,7 @@
         {
             "skill": "TS & JS",
             "icon": "/icons/js.png",
-            "skill_info": "Smartess - This website",
+            "skill_info": "Smartess - This website - BodyCad",
             "number_of_years": "3+",
             "alt": "TS & JS"
         },
@@ -45,7 +45,7 @@
         {
             "skill": "Python",
             "icon": "/icons/html.png",
-            "skill_info": "Mcgill - LightHouseLabs - Competitions",
+            "skill_info": "Mcgill - LightHouseLabs - Programming Competitions",
             "number_of_years": "5+",
             "alt": "Python"
         },
@@ -66,8 +66,15 @@
         {
             "skill": "Data Science",
             "icon": "/icons/html.png",
-            "skill_info": "Mcgill - LightHouseLabs - Competitions",
+            "skill_info": "Mcgill - LightHouseLabs - Programming Competitions",
             "number_of_years": "3+",
+            "alt": "MongoDB"
+        },
+        {
+            "skill": "C#",
+            "icon": "/icons/html.png",
+            "skill_info": "Inovestor - Brebeuf - Mcgill",
+            "number_of_years": "1+",
             "alt": "MongoDB"
         }
     ]

@@ -7,7 +7,7 @@ import data from "../../data/skillsData.json";
 const SkillSection = () => {
     return (
         <div className={styles.content}>
-            <Header hidden={true} header="MY SKILLS" sub_header="My extensive list of skills"/>
+            <Header hidden={true} header="MY SKILLS" sub_header="My extensive list of technical skills"/>
             <SkillsCarousel skills={data.skills}/>
         </div>
     );
