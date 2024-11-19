@@ -1,5 +1,4 @@
 import styles from "./Photo.module.css";
-import Image from "next/image";
 
 interface photoProps {
     src: string,

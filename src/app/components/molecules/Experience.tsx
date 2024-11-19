@@ -7,7 +7,7 @@ import Link from "next/link";
 
 interface ExperienceSectionProps {
     CompanyName: string,
-    CompanyLogo: any,
+    CompanyLogo: string,
     StartingDate: string,
     EndingDate: string,
     topic: string,

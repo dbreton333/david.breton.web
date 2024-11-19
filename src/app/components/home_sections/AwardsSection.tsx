@@ -72,7 +72,7 @@ const AwardsSection = () => {
                     and challenges.
                     </p>
                     <div className={styles.link_button_frame}>
-                        <LinkButton href="/awards" text="More about my awards " textSize='h5' arrowSize={30}/>
+                        <LinkButton href="/awards" text="More about my awards " textSize="h5" arrowSize={30}/>
                     </div>
                 </div>
 

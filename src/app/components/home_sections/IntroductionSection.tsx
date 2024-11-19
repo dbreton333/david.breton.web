@@ -1,9 +1,8 @@
 'use client'
 import { useState, useEffect, useMemo } from 'react';
-import compStyles from './components.module.css';
 import styles from './IntroductionSection.module.css';
 import Image from 'next/image';
-import LinkButton from '../atoms/LinkButton';
+//import LinkButton from '../atoms/LinkButton';
 import Link from 'next/link';
 
 const useTypewriter = (text: string, speed = 20, postEffect: any) => {
