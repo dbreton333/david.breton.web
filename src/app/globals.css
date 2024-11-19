@@ -61,15 +61,10 @@ a {
 @media (max-width: 700px) {
   /* Small screens */
   .height_intro {
-    min-height: 500px;
+    min-height: 550px;
     max-height: 600px;
   }
-
-  .height_outro {
-    min-height: 200px;
-    max-height: 300px;
-  }
-
+  
   .huge {
     font-size: 58px;
     line-height: 68px;
@@ -114,11 +109,6 @@ a {
   .height_intro {
     min-height: 650px;
     max-height: 800px;
-  }
-
-  .height_outro {
-    min-height: 200px;
-    max-height: 300px;
   }
 
   .huge {
@@ -169,11 +159,6 @@ a {
     max-height: 800px;
   }
 
-  .height_outro {
-    min-height: 200px;
-    max-height: 300px;
-  }
-
   .huge {
     font-size: 78px;
     line-height: 88px;
@@ -217,11 +202,6 @@ a {
   .height_intro {
     min-height: 800px;
     max-height: 900px;
-  }
-
-  .height_outro {
-    min-height: 200px;
-    max-height: 400px;
   }
 
   .huge {
@@ -270,11 +250,6 @@ a {
     max-height: 1000px;
   }
 
-  .height_outro {
-    min-height: 200px;
-    max-height: 600px;
-  }
-
   .huge {
     font-size: 122px;
     line-height: 120px;
@@ -318,11 +293,6 @@ a {
   .height_intro {
     min-height: 800px;
     max-height: 1300px;
-  }
-
-  .height_outro {
-    min-height: 200px;
-    max-height: 600px;
   }
 
   .huge {

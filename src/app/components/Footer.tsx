@@ -13,102 +13,116 @@ const Footer = () => {
     return (
         <footer className={`${styles.footer}`}>
             <div className={`${styles.devider}`}/>
-            <footer className={`${styles.footer_content} height_outro`}>
-            <div className={styles.general_info}>
-                <div className={styles.left_content}>
-                <div className={styles.profile}>
-                    <div className={styles.image_content}>
-                        <Image src="/images/my_image.png" alt="David Breton" fill={true}/>
-                    </div>
-                    <div className={styles.text}>
-                        <h1 className={`${styles.name} h4`}>David Breton</h1>
-                        <p className={`${styles.sub_name} h6`}>Software Developer</p>
-                    </div>
-                </div>
-                <div className={styles.social_media}>
-                  <div className={styles.social_media_icon}>
-                    <Link href="https://www.linkedin.com/in/david-breton-72564417b/">
-                    <Image
-                        src="/icons/linkedin.svg"
-                        alt="LinkedIn"
-                        fill={true}
-                        className={"object-contain"}
-                    />
-                    </Link>
-                  </div>
-                  <div className={styles.social_media_icon}>
-                    <Link href="https://github.com/dbreton333">
-                    <Image
-                        src="/icons/github.svg"
-                        alt="GitHub"
-                        fill={true}
-                        className={"object-contain"}
-                    />
-                    </Link>
-                  </div>
-                  <div className={styles.social_media_icon}>
-                    <Link href="https://www.instagram.com/biscuit_breton/">
-                    <Image
-                        src="/icons/instagram.svg"
-                        alt="Instagram"
-                        fill={true}
-                        className={"object-contain"}
-                    />
-                    </Link>
-                  </div>
-                </div>
-                
-                </div>
 
-                <div className={`${styles.right_content}`}>
-                    <h1 className={`${styles.title} h3`}>Get in touch</h1>
-                    <div className={styles.contact}>
-                        <div className={styles.email}>
-                            <h1 className={`${styles.paragraph} p`}>EMAIL ME:</h1>
-                            <LinkButton href="mailto:" text="davidbreton03@gmail.com" textSize="sub" arrowSize={20}/>
+            <footer className={`${styles.footer_content}`}>
+
+                <div className={styles.general_info}>
+                    <div className={styles.left_content}>
+                    <div className={styles.profile}>
+                        <div className={styles.profile_image}>
+                            <Image src="/images/my_image.png" alt="David Breton" fill={true}/>
                         </div>
-                        <div className={styles.phone}>
-                            <h2 className={`${styles.paragraph} p`}>CALL ME:</h2>
-                            <LinkButton href="mailto:" text="(514)-452-4102" textSize="sub" arrowSize={20}/>
+                        <div className={styles.profile_text}>
+                            <h1 className={`${styles.name} h4`}>David Breton</h1>
+                            <p className={`${styles.sub_name} h6`}>Software Developer</p>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div className={`${styles.devider}`}/>
-
-            <div className={styles.footer_nav}>
-                {/* Desktop Menu */}
-                <div className={styles.list_items}>
-                    <Link href="/" className={pathname === '/' ? styles.selected_item : styles.item}>
-                        Home
-                    </Link>
-                    <Link href="/awards" className={pathname === '/awards' ? styles.selected_item : styles.item}>
-                        Awards
-                    </Link>
-                    <Link href="/about" className={pathname === '/about' ? styles.selected_item : styles.item}>
-                        About
-                    </Link>
-                    <Link href="/portfolio" className={pathname === '/portfolio' ? styles.selected_item : styles.item}>
-                        Portfolio
-                    </Link>
-                </div>
-
-                <div className={styles.placeholder}/>
-
-                {/* Logo */}
-                <div className={styles.logo}>
-                    <Link href="/">
+                    <div className={styles.social_media}>
+                    <div className={styles.social_media_icon}>
+                        <Link href="https://www.linkedin.com/in/david-breton-72564417b/">
                         <Image
-                            src="/icons/my_logo.svg"
-                            alt="Logo"
+                            src="/icons/linkedin.svg"
+                            alt="LinkedIn"
                             fill={true}
-                            style={{ objectFit: 'contain' }}
+                            className={"object-contain"}
                         />
-                    </Link>
+                        </Link>
+                    </div>
+                    <div className={styles.social_media_icon}>
+                        <Link href="https://github.com/dbreton333">
+                        <Image
+                            src="/icons/github.svg"
+                            alt="GitHub"
+                            fill={true}
+                            className={"object-contain"}
+                        />
+                        </Link>
+                    </div>
+                    <div className={styles.social_media_icon}>
+                        <Link href="https://www.instagram.com/biscuit_breton/">
+                        <Image
+                            src="/icons/instagram.svg"
+                            alt="Instagram"
+                            fill={true}
+                            className={"object-contain"}
+                        />
+                        </Link>
+                    </div>
+                    </div>
+                    
+                    </div>
+
+                    <div className={`${styles.right_content}`}>
+                        <h1 className={`${styles.title} h3`}>Get in touch</h1>
+                        <div className={styles.contact}>
+                            <div className={styles.email}>
+                                <h1 className={`${styles.paragraph} p`}>EMAIL ME:</h1>
+                                <div className={styles.link}>
+                                    <LinkButton href="mailto:" text="davidbreton03@gmail.com" textSize="sub" arrowSize={20}/>
+                                </div>
+                            </div>
+                            <div className={styles.phone}>
+                                <h2 className={`${styles.paragraph} p`}>CALL ME:</h2>
+                                <div className={styles.link}>
+                                    <LinkButton href="mailto:" text="(514)-452-4102" textSize="sub" arrowSize={20}/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </footer>
+
+
+
+
+                <div className={`${styles.devider_footer}`}/>
+
+
+
+
+
+                <div className={styles.footer_nav}>
+                    
+                    {/* Desktop Menu */}
+                    <div className={styles.list_items}>
+                        <Link href="/" className={pathname === '/' ? styles.selected_item : styles.item}>
+                            Home
+                        </Link>
+                        <Link href="/awards" className={pathname === '/awards' ? styles.selected_item : styles.item}>
+                            Awards
+                        </Link>
+                        <Link href="/about" className={pathname === '/about' ? styles.selected_item : styles.item}>
+                            About
+                        </Link>
+                        <Link href="/portfolio" className={pathname === '/portfolio' ? styles.selected_item : styles.item}>
+                            Portfolio
+                        </Link>
+                    </div>
+
+                    <div className={styles.placeholder}/>
+
+                    {/* Logo */}
+                    <div className={styles.logo}>
+                        <Link href="/">
+                            <Image
+                                src="/icons/my_logo.svg"
+                                alt="Logo"
+                                fill={true}
+                                style={{ objectFit: 'contain' }}
+                            />
+                        </Link>
+                    </div>
+                </div>
+            </footer>
         </footer>
     );
 }
