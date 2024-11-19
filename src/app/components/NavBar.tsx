@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './NavBar.module.css';
 import HamburgerMenu from './atoms/Hamburger';
+import NavModal from './NavModal';
 
 
 const NavBar = () => {
@@ -32,11 +33,11 @@ const NavBar = () => {
                 <Link href="/" className={pathname === '/' ? styles.selected_item : styles.item}>
                     Home
                 </Link>
-                <Link href="/about" className={pathname === '/about' ? styles.selected_item : styles.item}>
-                    About
-                </Link>
                 <Link href="/awards" className={pathname === '/awards' ? styles.selected_item : styles.item}>
                     Awards
+                </Link>
+                <Link href="/about" className={pathname === '/about' ? styles.selected_item : styles.item}>
+                    About
                 </Link>
                 <Link href="/portfolio" className={pathname === '/portfolio' ? styles.selected_item : styles.item}>
                     Portfolio
@@ -45,6 +46,7 @@ const NavBar = () => {
 
             {/* Mobile Menu */}
             <HamburgerMenu isOpen={isOpen} toggleMenu={toggleMenu} /> 
+            <NavModal isOpen={isOpen} toggleModal={toggleMenu} />
         </div>
     );
 }

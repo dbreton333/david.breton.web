@@ -83,11 +83,11 @@ const Footer = () => {
                     <Link href="/" className={pathname === '/' ? styles.selected_item : styles.item}>
                         Home
                     </Link>
-                    <Link href="/about" className={pathname === '/about' ? styles.selected_item : styles.item}>
-                        About
-                    </Link>
                     <Link href="/awards" className={pathname === '/awards' ? styles.selected_item : styles.item}>
                         Awards
+                    </Link>
+                    <Link href="/about" className={pathname === '/about' ? styles.selected_item : styles.item}>
+                        About
                     </Link>
                     <Link href="/portfolio" className={pathname === '/portfolio' ? styles.selected_item : styles.item}>
                         Portfolio
