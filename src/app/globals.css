@@ -62,7 +62,7 @@ a {
   /* Small screens */
   .height_intro {
     min-height: 700px;
-    max-height: 750px;
+    max-height: 850px;
   }
 
   .height_outro {
