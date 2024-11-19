@@ -2,7 +2,7 @@
 import styles from "./SkillWidget.module.css";
 import Image from "next/image";
 
-const SkillWidget = ({ item, itemsPerView }) => {
+const SkillWidget = ({ item }) => {
     return (
         <div className={styles.skill_widget_container}>
             <div className={styles.skill_widget}>

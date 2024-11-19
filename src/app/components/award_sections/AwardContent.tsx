@@ -1,7 +1,6 @@
 import { AwardDescription } from "../atoms/AwardDescription";
 import styles from "./AwardContent.module.css";
 import { Photo } from "../atoms/Photo";
-import Footer from "../Footer";
  
 export const AwardContent = () => {
     return (

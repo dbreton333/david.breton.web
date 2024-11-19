@@ -9,8 +9,8 @@ interface ModalProps {
 }
 
 const NavModal = (props: ModalProps) => {
-  if (!props.isOpen) return null;
   const pathname = usePathname();
+  if (!props.isOpen) return null;
 
   return (
     <div className={styles.modalOverlay} onClick={props.toggleModal}>

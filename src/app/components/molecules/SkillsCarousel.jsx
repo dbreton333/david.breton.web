@@ -45,7 +45,7 @@ const SkillsCarousel = ({ skills }) => {
                         transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`,
                     }}>
                     {skills.map((item, index) => (
-                        <SkillWidget key={index} item={item} itemsPerView={itemsPerView} />
+                        <SkillWidget key={index} item={item} />
                     ))}
                 </div>
             </div>
