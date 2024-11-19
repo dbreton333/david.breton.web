@@ -21,19 +21,6 @@
     background-color: #5D6C83;
 }
 
-.horizontal_devider {
-    width: 1px;
-    height: 60vh;
-    background-color: #5D6C83;
-}
-
-.vertical_devider {
-    height: 1px;
-    width: 100%;
-    background-color: #5D6C83;
-
-}
-
 .education_content {
     display: grid;
     grid-template-columns: auto auto;
@@ -52,31 +39,10 @@
 @media screen and (max-width: 600px) {
 
     .education_content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        padding-top: 5vh;
-    }
-
-    .horizontal_devider {
-        display: none;
-    }
-
-    .education_content {
         display: grid;
         grid-template-columns: auto;
-        flex-direction: row;
         align-items: center;
         width: 100%;
         padding-top: 5vh;
     }
-
-    .hidden_vertical_devider {
-        display: flex;
-        height: 1px;
-        width: 100%;
-        background-color: #5D6C83;
-    }
-    
 }

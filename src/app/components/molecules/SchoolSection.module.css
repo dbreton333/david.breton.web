@@ -18,6 +18,13 @@
     border-width: 1px;
 }
 
+@media screen and (max-width: 768px) {
+    .school_section {
+        padding: 10px;
+    }
+    
+}
+
 .topic {
     padding-bottom: 10px;
 }

@@ -97,6 +97,9 @@ const AwardsSection = () => {
                     Quebec Engineering Competition, Canadian Engineering Competition and two at the 
                     Engineering Games.
                     </p>
+                    <div className={styles.link_button_frame_hidden}>
+                        <LinkButton href="/awards" text="More about my awards " textSize="h5" arrowSize={30}/>
+                    </div>
                 </div>
             </div>
         </div>
