@@ -92,7 +92,7 @@ const AwardsSection = () => {
                         </div>
                     </div>
                     <p className={`${styles.paragraph} font-light p`}>
-                    I'm proud to conclude my competitive programming career with a total of 6 titles, 
+                    I&apos;m proud to conclude my competitive programming career with a total of 6 titles, 
                     including podiums at the Computer Science Games,  McGill Engineering Competition, 
                     Quebec Engineering Competition, Canadian Engineering Competition and two at the 
                     Engineering Games.

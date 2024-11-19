@@ -5,7 +5,7 @@ import Image from 'next/image';
 //import LinkButton from '../atoms/LinkButton';
 import Link from 'next/link';
 
-const useTypewriter = (text: string, speed = 20, postEffect: any) => {
+const useTypewriter = (text: string, speed = 20, postEffect: (value: boolean) => void) => {
   const [index, setIndex] = useState(0);
   const displayText = useMemo(() => text.slice(0, index), [index]);
   useEffect(() => {
@@ -38,12 +38,12 @@ const Introduction = () => {
               <div className={styles.section_devider}/>
               <h1 className={`${styles.title} font-bold h1`}>
                 Nice to meet you, <br/>
-                I'm <span>{myname}</span>
+                I&apos;m <span>{myname}</span>
               </h1>
               <p className={`${showParagraph ? styles.fade_in :styles.hide }  ${styles.paragraph} font-light p`}>
                 As a dynamic Computer Engineer with a strong  background in computer science competitions, 
                 active committee  involvement, and a diverse portfolio of software projects, 
-                I've honed my skills as a proficient problem solver, full-stack developer, and  
+                I&apos;ve honed my skills as a proficient problem solver, full-stack developer, and  
                 effective leader.
               </p>
               {/* <div className={`${showParagraph ? styles.fade_in :styles.hide } ${styles.link_button_frame}`}>

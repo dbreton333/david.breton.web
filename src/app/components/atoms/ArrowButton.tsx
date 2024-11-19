@@ -1,4 +1,5 @@
 import styles from "./ArrowButton.module.css";
+import Image from "next/image";
 
 interface ArrowProps {
     icon: string;
@@ -12,7 +13,9 @@ const ArrowButton = ({ icon, onClick, disabled, direction }: ArrowProps) => {
 
     return (
         <button onClick={onClick} className={`${styles.navButton} ${direction == "right"? styles.navButton_right: styles.navButton_left}`} disabled={disabled}>
-            <img src={icon} alt="Arrow" className={styles.icon}/>
+            <div className={styles.icon}>
+                <Image src={icon} alt="Arrow" fill={true}/>
+            </div>
         </button>
     );
 }
