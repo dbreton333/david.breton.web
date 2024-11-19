@@ -1,4 +1,5 @@
 import styles from "./Photo.module.css";
+import Image from "next/image";
 
 interface photoProps {
     src: string,
@@ -7,10 +8,10 @@ interface photoProps {
 
 export const Photo = (props: photoProps) => {
     return (
-        <div>
-            <div className={styles.photo_frame}>
-                <img src={props.src} alt={props.alt} className={styles.img} />
-            </div>
+
+        <div className={styles.img}>
+            <Image src={props.src} alt={props.alt} fill={true} />
         </div>
+
     );
 }
