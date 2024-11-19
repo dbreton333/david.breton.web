@@ -47,9 +47,9 @@ const Introduction = () => {
                 I've honed my skills as a proficient problem solver, full-stack developer, and  
                 effective leader.
               </p>
-              <div className={`${showParagraph ? styles.fade_in :styles.hide } ${styles.link_button_frame}`}>
+              {/* <div className={`${showParagraph ? styles.fade_in :styles.hide } ${styles.link_button_frame}`}>
                 <LinkButton href="/about" text="Learn more about me" textSize='p' arrowSize={20}/>
-              </div>
+              </div> */}
               <div className={ `${showParagraph ? styles.fade_in :styles.hide } ${styles.devider}`}/>
               <h1 className={`${showParagraph ? styles.fade_in :styles.hide } ${styles.paragraph} font-bold sub`}>
                 FOLLOW ME
