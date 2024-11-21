@@ -68,13 +68,13 @@ const Footer = () => {
                             <div className={styles.email}>
                                 <h1 className={`${styles.paragraph} p`}>EMAIL ME:</h1>
                                 <div className={styles.link}>
-                                    <LinkButton href="mailto:" text="davidbreton03@gmail.com" textSize="sub" arrowSize={20}/>
+                                    <LinkButton href="mailto:davidbreton03@gmail.com" text="davidbreton03@gmail.com" textSize="sub"/>
                                 </div>
                             </div>
                             <div className={styles.phone}>
                                 <h2 className={`${styles.paragraph} p`}>CALL ME:</h2>
                                 <div className={styles.link}>
-                                    <LinkButton href="mailto:" text="(514)-452-4102" textSize="sub" arrowSize={20}/>
+                                    <LinkButton href="call:davidbreton03@gmail.com" text="(514)-452-4102" textSize="sub"/>
                                 </div>
                             </div>
                         </div>
