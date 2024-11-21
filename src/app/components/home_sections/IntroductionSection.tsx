@@ -52,7 +52,7 @@ const Introduction = () => {
                   <LinkButton href="/about" text="Learn more about me" textSize='p' arrowSize={20}/>
                 </div> */}
                 <div className={ `${showParagraph ? styles.fade_in :styles.hide } ${styles.hidden} ${styles.devider}`}/>
-                <h1 className={`${showParagraph ? styles.fade_in :styles.hide } ${styles.hidden} ${styles.paragraph} font-bold sub`}>
+                <h1 className={`${showParagraph ? styles.fade_in :styles.hide } ${styles.hidden} ${styles.paragraph} font-bold h6`}>
                   FOLLOW ME
                 </h1>
                 <div className={` ${showParagraph ? styles.fade_in :styles.hide } ${styles.hidden} ${styles.social_media}`}>
@@ -108,7 +108,7 @@ const Introduction = () => {
                 <LinkButton href="/about" text="Learn more about me" textSize='p' arrowSize={20}/>
               </div> */}
               <div className={ `${showParagraph ? styles.fade_in :styles.hide } ${styles.devider}`}/>
-              <h1 className={`${showParagraph ? styles.fade_in :styles.hide } ${styles.paragraph} font-bold sub`}>
+              <h1 className={`${showParagraph ? styles.fade_in :styles.hide } ${styles.paragraph} font-bold h6`}>
                 FOLLOW ME
               </h1>
               <div className={` ${showParagraph ? styles.fade_in :styles.hide } ${styles.social_media}`}>
