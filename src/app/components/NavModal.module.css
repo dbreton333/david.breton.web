@@ -1,6 +1,6 @@
 .modalOverlay {
     position: fixed;
-    top: 96px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -12,6 +12,7 @@
 }
 
 .modalContent {
+    margin-top: 96px;
     background-color: #2B313C;
     padding: 20px;
     border-radius: 8px;
