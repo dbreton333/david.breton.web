@@ -62,7 +62,7 @@ a {
   /* Small screens */
   .height_intro {
     min-height: 480px;
-    max-height: 500px;
+    max-height: 600px;
   }
   
   .huge {
@@ -103,7 +103,7 @@ a {
   }
 }
 
-@media (min-width: 700px) and (max-width: 1000px) {
+@media (min-width: 700px) and (max-width: 1080px) {
   /* Small screens */
 
   .height_intro {
@@ -141,7 +141,7 @@ a {
   }
   .p {
     font-size: 14px;
-    line-height: 28px;
+    line-height: 24px;
   }
   .sub {
     font-size: 12px;
@@ -151,7 +151,7 @@ a {
 }
 
 
-@media (min-width: 1000px) and (max-width: 1380px) {
+@media (min-width: 1080px) and (max-width: 1380px) {
   /* Small screens */
 
   .height_intro {
