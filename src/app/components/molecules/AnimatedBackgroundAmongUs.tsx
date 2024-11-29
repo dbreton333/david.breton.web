@@ -118,7 +118,7 @@ export const AnimatedBackgoundAmongUs = () => {
                 value: 40,
             },
             move: {
-                speed: 10,
+                speed: 2,
                 outModes: {
                     default: "none",
                     right: "destroy",
