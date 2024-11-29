@@ -55,18 +55,19 @@ const Experience = (props: ExperienceSectionProps) => {
             <div className={styles.content_frame}>
                 <div className={styles.topic_and_date_frame}>
                     <div className={styles.title}>
-                    <h1 className={`${styles.name} h5`}>
-                        {props.CompanyName}
-                    </h1>
+                        <h1 className={`${styles.name} h5`}>
+                            {props.CompanyName}
+                        </h1>
+                        <div className={styles.date_frame}>
+                            <h2 className={`${styles.date} p`}>{props.StartingDate}</h2>
+                            <h2 className={`${styles.slash} p`}> &nbsp; / &nbsp; </h2>
+                            <h2 className={`${styles.date} p`}> {props.EndingDate}</h2>
+                        </div>
+                    </div>
+                   
                     <h1 className={`${styles.topic} h5`}>
                         {props.topic}
                     </h1>
-                    </div>
-                    <div className={styles.date_frame}>
-                        <h2 className={`${styles.date} p`}>{props.StartingDate}</h2>
-                        <h2 className={`${styles.slash} p`}> &nbsp; / &nbsp; </h2>
-                        <h2 className={`${styles.date} p`}> {props.EndingDate}</h2>
-                    </div>
                 </div>
                 <p className={`${styles.paragraph} p font-light`}>
                  {props.paragraph}   

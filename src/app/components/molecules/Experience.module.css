@@ -50,10 +50,18 @@
 
 .topic_and_date_frame {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.title {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10%;
 }
 
 .date_frame {
@@ -61,9 +69,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    width: 30%;
     height: 100%;
 }
+
+
 
 
 .date {
@@ -81,21 +90,14 @@
 
 .name {
     padding-top: 2px;
-    width: 100%;
 }
 
 .topic {
-    padding-top: 2px;
-    padding-bottom: 2px;
     color: #C3CAD5;
+    width: 100%;
+    justify-content: flex-start;
 }
 
-.title {
-    display: flex;
-    flex-direction: column;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
 
 @media screen and (max-width: 1000px) {
 
