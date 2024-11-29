@@ -10,6 +10,7 @@ interface ModalProps {
 
 const NavModal = (props: ModalProps) => {
   const pathname = usePathname();
+
   if (!props.isOpen) return null;
 
   return (
