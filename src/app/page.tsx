@@ -1,3 +1,4 @@
+'use client'
 import styles from "./page.module.css";
 import NavBar from "./components/NavBar";
 import Introduction from "./components/home_sections/IntroductionSection";
@@ -7,8 +8,17 @@ import EducationSection from "./components/home_sections/EducationSection";
 import ExperienceSection from "./components/home_sections/ExperienceSection";
 import SkillSection from "./components/home_sections/SkillSection";
 import Footer from "./components/Footer";
+import { useEffect } from "react";
+import { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 
 export default function Home() {
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    })
+  }, []);
 
   return (
     <div className={styles.main}>
