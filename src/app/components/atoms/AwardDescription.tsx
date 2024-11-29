@@ -26,7 +26,7 @@ export const AwardDescription = (props: awardProps) => {
                     }
                 });
             },
-            { threshold: 0.15 }
+            { threshold: 0.10 }
         );
 
         if (sectionDeviderRef.current) {
