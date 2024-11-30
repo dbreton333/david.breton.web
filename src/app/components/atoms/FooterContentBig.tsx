@@ -63,15 +63,15 @@ export const FooterContentBig = () => {
                 <h1 className={`${styles.title} h3`}>Get in touch</h1>
                 <div className={styles.contact}>
                     <div className={styles.email}>
-                        <h1 className={`${styles.paragraph} p`}>EMAIL ME:</h1>
+                        <h1 className={`${styles.paragraph} h6`}>EMAIL ME:</h1>
                         <div className={styles.link}>
-                            <LinkButton href="mailto:davidbreton03@gmail.com" text="davidbreton03@gmail.com" textSize="sub"/>
+                            <LinkButton href="mailto:davidbreton03@gmail.com" text="davidbreton03@gmail.com" textSize="p"/>
                         </div>
                     </div>
                     <div className={styles.phone}>
-                        <h2 className={`${styles.paragraph} p`}>CALL ME:</h2>
+                        <h2 className={`${styles.paragraph} h6`}>CALL ME:</h2>
                         <div className={styles.link}>
-                            <LinkButton href="call:davidbreton03@gmail.com" text="(514)-452-4102" textSize="sub"/>
+                            <LinkButton href="call:davidbreton03@gmail.com" text="(514)-452-4102" textSize="p"/>
                         </div>
                     </div>
                 </div>

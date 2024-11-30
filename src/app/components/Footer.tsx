@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Link
  from 'next/link';
 import { usePathname } from 'next/navigation';
-import LinkButton from './atoms/LinkButton';
 import { FooterContentBig } from './atoms/FooterContentBig';
 import { FooterContentSmall } from './atoms/FooterContentSmall';
 
@@ -17,13 +16,9 @@ const Footer = () => {
             <div className={`${styles.devider}`}/>
 
                 <FooterContentSmall/>
-
+                <FooterContentBig/>
 
                 <div className={`${styles.devider_footer}`}/>
-
-
-
-
 
                 <div className={styles.footer_nav}>
                     

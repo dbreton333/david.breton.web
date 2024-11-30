@@ -5,14 +5,6 @@
     z-index: 2;
 }
 
-.footer_content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-left: 8%;
-    padding-right: 8%;
-}
-
 
 .general_info {
     display: flex;
@@ -33,6 +25,8 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    padding-left: 8%;
+    padding-right: 8%;
 }
 
 

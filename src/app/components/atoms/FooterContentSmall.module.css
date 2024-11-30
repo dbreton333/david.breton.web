@@ -4,7 +4,16 @@
     flex-direction: column;
     width: 100%;
     padding-left: 8%;
-    padding-right: 8%;
+    padding-right: 8%; 
+    padding-top: 8%;
+    padding-bottom: 8%;
+    gap: 20px;
+}
+
+@media screen and (min-width: 700px) {
+    .footer_content {
+        display: none;
+    }   
 }
 
 .general_info {
@@ -14,8 +23,7 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    padding-top: 8%;
-    padding-bottom: 8%;
+
 }
 
 .top_content {
@@ -24,7 +32,6 @@
     align-items: flex-start;
     justify-content: space-between;
     width: 100%;
-    height: 100%;
 }
 
 
@@ -35,12 +42,11 @@
     justify-content: center;
     height: 100%;
     width: 100%;
-    padding-bottom: 10%;
-    gap: 5%;
+    gap: 30px;
 }
 
 .profile_image {
-    width: 30%;
+    width: 20%;
     aspect-ratio: 1;
     position: relative;
     max-width: 200px;
@@ -82,15 +88,15 @@
     position: relative;
 }
 
-
-
-.right_content {
+.bottom_content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
     height: 100%;
-    width: 50%;
+    width: 100%;
+    gap: 10px;
+    padding-bottom: 20px;
 }
 
 .contact{
@@ -103,7 +109,6 @@
 
 .title {
     padding-top: 2%;
-    padding-bottom: 10%;
 }
 
 
@@ -115,20 +120,7 @@
 .link {
     padding-top: 2%;
     padding-bottom: 2%;
-}
-
-
-@media screen and (max-width: 900px) {
-
-    .contact{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-        height: 100%;
-        width: 100%;
-    }
-}
+} 
 
 .email {
     display: flex;
