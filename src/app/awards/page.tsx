@@ -1,7 +1,7 @@
 'use client'
 import styles from "../page.module.css";
 import NavBar from "../components/NavBar";
-import { AwardContent } from "../components/award_sections/AwardContent";
+import { AwardContent } from "../components/award_page_sections/AwardContent";
 import Footer from "../components/Footer";
 import { AnimatedBackgound } from "../components/molecules/AnimatedBackground";
 

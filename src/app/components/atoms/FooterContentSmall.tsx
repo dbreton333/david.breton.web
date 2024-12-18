@@ -37,7 +37,7 @@ export const FooterContentSmall = () => {
                     <div className={styles.phone}>
                         <h2 className={`${styles.paragraph} h6`}>CALL ME:</h2>
                         <div className={styles.link}>
-                            <LinkButton href="call:davidbreton03@gmail.com" text="(514)-452-4102" textSize="p"/>
+                            <LinkButton href="tel:+15144524102" text="(514)-452-4102" textSize="p"/>
                         </div>
                     </div>
                 </div>

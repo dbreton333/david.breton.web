@@ -18,7 +18,7 @@
             "skill": "HTML & CSS",
             "icon": "/icons/html.png",
             "skill_info": "This website- BodyCad",
-            "number_of_years": "1+",
+            "number_of_years": "2+",
             "alt": "HTML & CSS"
         },
         {
@@ -39,7 +39,7 @@
             "skill": "React.js",
             "icon": "/icons/react.png",
             "skill_info": "This website- BodyCad",
-            "number_of_years": "1+",
+            "number_of_years": "2+",
             "alt": "React.js"
         },
         {
@@ -61,21 +61,28 @@
             "icon": "/icons/figma.png",
             "skill_info": "Smartess - This website - Concordia Capstone Shareholder",
             "number_of_years": "3+",
-            "alt": "MongoDB"
+            "alt": "Figma"
         },
         {
             "skill": "Data Science",
             "icon": "/icons/data.png",
             "skill_info": "Mcgill - LightHouseLabs - Programming Competitions",
             "number_of_years": "3+",
-            "alt": "MongoDB"
+            "alt": "Data Science"
         },
         {
             "skill": "C#",
             "icon": "/icons/c.png",
             "skill_info": "Inovestor - Brebeuf - Mcgill",
             "number_of_years": "1+",
-            "alt": "MongoDB"
+            "alt": "C#"
+        },
+        {
+            "skill": "Next.js",
+            "icon": "/icons/c.png",
+            "skill_info": "Personal Projects - This website",
+            "number_of_years": "1+",
+            "alt": "Next.js"
         }
     ]
 }

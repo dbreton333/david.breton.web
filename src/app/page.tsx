@@ -1,12 +1,12 @@
 'use client'
 import styles from "./page.module.css";
 import NavBar from "./components/NavBar";
-import Introduction from "./components/home_sections/IntroductionSection";
-import AwardsSection from "./components/home_sections/AwardsSection";
+import Introduction from "./components/home_page_sections/IntroductionSection";
+import AwardsSection from "./components/home_page_sections/AwardsSection";
 import InfiniteCarousel from "./components/molecules/InfiniteCarousel";
-import EducationSection from "./components/home_sections/EducationSection";
-import ExperienceSection from "./components/home_sections/ExperienceSection";
-import SkillSection from "./components/home_sections/SkillSection";
+import EducationSection from "./components/home_page_sections/EducationSection";
+import ExperienceSection from "./components/home_page_sections/ExperienceSection";
+import SkillSection from "./components/home_page_sections/SkillSection";
 import Footer from "./components/Footer";
 import { useEffect } from "react";
 import { initParticlesEngine } from "@tsparticles/react";

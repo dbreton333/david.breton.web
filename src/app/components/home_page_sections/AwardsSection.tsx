@@ -72,7 +72,7 @@ const AwardsSection = () => {
                     and challenges.
                     </p>
                     <div className={styles.link_button_frame}>
-                        <LinkButton href="/awards" text="More about my awards " textSize="h5"/>
+                        <LinkButton href="/awards" text="MORE ABOUT MY AWARDS" textSize="h5"/>
                     </div>
                 </div>
 
@@ -98,7 +98,7 @@ const AwardsSection = () => {
                     Engineering Games.
                     </p>
                     <div className={styles.link_button_frame_hidden}>
-                        <LinkButton href="/awards" text="MORE ABOUT MY AWARDS " textSize="h5"/>
+                        <LinkButton href="/awards" text="MORE ABOUT MY AWARDS" textSize="h5"/>
                     </div>
                 </div>
             </div>
