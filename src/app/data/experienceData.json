@@ -24,7 +24,7 @@
             "StartingDate": "MAY 2020",
             "EndingDate": "SEP 2020",
             "topic": "Software Engineer Intern",
-            "description": "During my tenure at BodyCad, I played a key role in automating the supply chain by streamlining the process of label generation for custom implant orders. I also developed a React.js user interface that allows medical professionals to efficiently place orders for BodyCad implants that was directly integrated into the automated label process."
+            "description": "During my tenure at BodyCad, I played a key role in automating the supply chain by streamlining the process of label generation for custom implant orders. I also developed a React.js user interface that allows medical professionals to efficiently place orders for BodyCad implants. This interface was integrated with the automated label process, where orders submitted through my interface were queued into Amazon Simple Queue Service (AWS SQS). This integration not only reduced the time required to place an order and generate a label but also introduced a system to block unauthorized requests, enhancing overall efficiency and security."
         },
         {
             "CompanyName": "BRP",

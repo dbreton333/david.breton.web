@@ -7,8 +7,8 @@ export const AwardContent = () => {
         <div className={styles.container}>
             <div className={`${styles.award_frame}`}>
                 <div className={`${styles.left_content}`}>
-                    <AwardDescription position={1} title="Mcgill Engineering Competition" description="My team and I won first place in the programming category of the McGill Engineering Competition, where we had 12 hours to tackle five computer science challenges."/>
-                    <AwardDescription position={1} title="Computer Science Games" description="The Computer Science Games are a collegiate  competition that includes challenges from all aspects of computing and  that includes 10+ universities with teams of 10 computer scientists. I  won 1st place in the machine learning competition where students were  task to develop the best machine learning model based on a given dataset within 10 hours."/>
+                    <AwardDescription position={1} title="Mcgill Engineering Competition" description="My team and I won first place in the programming category of the McGill Engineering Competition, where we had 12 hours to tackle five computer science challenges and present our work in front of five judges."/>
+                    <AwardDescription position={1} title="Computer Science Games" description="The Computer Science Games is the largest computer science competition in Quebec, that includes challenges from all aspects of computing and where more then 10 universities with teams of 10 computer scientists participate each year. I  won 1st place in the machine learning competition where students were task to develop the best machine learning model based on a given dataset within 10 hours."/>
                 </div>
                 <div className={`${styles.right_content}`} style={{aspectRatio: 0.75}}>
                     <Photo src="/images/victory1.png" alt="awards"/>
