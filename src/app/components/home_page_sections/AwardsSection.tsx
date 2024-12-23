@@ -79,7 +79,7 @@ const AwardsSection = () => {
                 <div className={styles.right_content}>
                     <div className={styles.award_count}>
                         <div className={styles.podiums}>
-                            <AnimatedCounter targetNumber={6} colorClass={styles.podiums_nbr}/>
+                            <AnimatedCounter targetNumber={5} colorClass={styles.podiums_nbr}/>
                             <p className={`h5`}>
                             &nbsp;&nbsp;Podiums
                             </p>
@@ -92,7 +92,7 @@ const AwardsSection = () => {
                         </div>
                     </div>
                     <p className={`${styles.paragraph} font-light p`}>
-                    I&apos;m proud to conclude my competitive programming career with a total of 6 titles, 
+                    I&apos;m proud to conclude my competitive programming career with a total of 5 titles, 
                     including podiums at the Computer Science Games,  McGill Engineering Competition, 
                     Quebec Engineering Competition, Canadian Engineering Competition and two at the 
                     Engineering Games.

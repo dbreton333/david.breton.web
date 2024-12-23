@@ -39,3 +39,21 @@
 .devider.hidden {
     display: none;
 }
+
+@media screen and (max-width: 768px) {
+    .header {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 30px;
+    }
+    .sub_header {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
