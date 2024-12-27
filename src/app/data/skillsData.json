@@ -12,7 +12,7 @@
             "icon": "/icons/algo.png",
             "skill_info": "Mcgill - Computer Science Competition",
             "number_of_years": "5+",
-            "alt": "HTML & CSS"
+            "alt": "Algorithms"
         },
         {
             "skill": "HTML & CSS",
@@ -26,7 +26,7 @@
             "icon": "/icons/data.png",
             "skill_info": "Mcgill - IEEE - Computer Science Competition",
             "number_of_years": "5+",
-            "alt": "HTML & CSS"
+            "alt": "Data Structures"
         },
         {
             "skill": "TS & JS",
@@ -57,6 +57,20 @@
             "alt": "Node.js"
         },
         {
+            "skill": "Next.js",
+            "icon": "/icons/react.png",
+            "skill_info": "Personal Projects - This website",
+            "number_of_years": "1+",
+            "alt": "Next.js"
+        },
+        {
+            "skill": "Docker",
+            "icon": "/icons/docker.png",
+            "skill_info": "Smartess",
+            "number_of_years": "1+",
+            "alt": "Docker"
+        },
+        {
             "skill": "Figma",
             "icon": "/icons/figma.png",
             "skill_info": "Smartess - This website - Concordia Capstone Shareholder",
@@ -78,11 +92,11 @@
             "alt": "C#"
         },
         {
-            "skill": "Next.js",
-            "icon": "/icons/react.png",
-            "skill_info": "Personal Projects - This website",
-            "number_of_years": "1+",
-            "alt": "Next.js"
+            "skill": "Java",
+            "icon": "/icons/java.png",
+            "skill_info": "Mcgill",
+            "number_of_years": "3+",
+            "alt": "Java"
         }
     ]
 }
