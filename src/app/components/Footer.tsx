@@ -48,6 +48,7 @@ const Footer = () => {
                             src="/icons/my_logo.svg"
                             alt="Logo"
                             fill={true}
+                            sizes="200px"
                             style={{ objectFit: 'contain' }}
                         />
                     </Link>

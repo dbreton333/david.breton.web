@@ -23,6 +23,8 @@ const NavBar = () => {
                         src="/icons/my_logo.svg"
                         alt="Logo"
                         fill={true}
+                        priority
+                        sizes="200px"
                         style={{ objectFit: 'contain' }}
                     />
                 </Link>

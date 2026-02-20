@@ -70,6 +70,8 @@
     max-width: 200px;
     justify-content: flex-start;
     align-items: flex-start;
+    border-radius: 50%;
+    overflow: hidden;
 }
 .profile_text {
     display: flex;
@@ -104,6 +106,11 @@
     height: 100%;
     aspect-ratio: 1;
     position: relative;
+    transition: filter 0.3s ease;
+}
+
+.social_media_icon:hover {
+    filter: brightness(0.5) grayscale(100%);
 }
 
 

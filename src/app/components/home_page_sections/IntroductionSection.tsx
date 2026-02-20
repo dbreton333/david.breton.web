@@ -92,7 +92,14 @@ const Introduction = () => {
 
             <div className={styles.right_content}>
               <div className={styles.image_content}>
-                <Image src="/images/my_image.png" alt="David Breton" fill={true}/>
+                <Image
+                  src="/images/my_image_new.png"
+                  alt="David Breton"
+                  fill={true}
+                  priority
+                  sizes="(max-width: 900px) 100vw, 45vw"
+                  style={{ objectFit: 'cover' }}
+                />
               </div>
             </div>
           </div>

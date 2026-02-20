@@ -48,7 +48,7 @@ const Experience = (props: ExperienceSectionProps) => {
             <div className={styles.logo_frame}>
                 <div className={styles.logo}>
                     <Link href={props.ref}>
-                        <Image src={props.CompanyLogo} fill={true} alt="Company Logo"/>
+                        <Image src={props.CompanyLogo} fill={true} sizes="(max-width: 768px) 100px, 200px" alt="Company Logo" style={{ objectFit: 'contain' }}/>
                     </Link>
                 </div>
             </div>

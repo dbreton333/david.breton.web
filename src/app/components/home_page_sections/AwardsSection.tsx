@@ -14,31 +14,57 @@ interface AnimatedCounterProps {
 const AnimatedCounter = ({ targetNumber, colorClass }: AnimatedCounterProps) => {
     const [count, setCount] = useState(0);
     const ref = useRef<HTMLHeadingElement | null>(null);
+    const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
-                    let current = 0;
+                    // Clear any existing interval
+                    if (intervalRef.current) {
+                        clearInterval(intervalRef.current);
+                        intervalRef.current = null;
+                    }
+
                     setCount(0); // Reset the count to 0 each time it enters
-                    const interval = setInterval(() => {
-                        if (current < targetNumber) {
-                            setCount(prev => prev + 1);
-                            current++;
-                        } else {
-                            clearInterval(interval);
-                        }
-                    }, 100); // Adjust speed as needed
+
+                    intervalRef.current = setInterval(() => {
+                        setCount(prev => {
+                            if (prev >= targetNumber) {
+                                if (intervalRef.current) {
+                                    clearInterval(intervalRef.current);
+                                    intervalRef.current = null;
+                                }
+                                return targetNumber;
+                            }
+                            return prev + 1;
+                        });
+                    }, 100);
+                } else {
+                    // When leaving viewport, clear interval and reset
+                    if (intervalRef.current) {
+                        clearInterval(intervalRef.current);
+                        intervalRef.current = null;
+                    }
+                    setCount(0);
                 }
             },
             { threshold: 1.0 }
         );
 
-        if (ref.current) {
-            observer.observe(ref.current);
+        const currentRef = ref.current;
+        if (currentRef) {
+            observer.observe(currentRef);
         }
 
         return () => {
+            if (intervalRef.current) {
+                clearInterval(intervalRef.current);
+                intervalRef.current = null;
+            }
+            if (currentRef) {
+                observer.unobserve(currentRef);
+            }
             observer.disconnect();
         };
     }, [targetNumber]);

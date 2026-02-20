@@ -1,13 +1,6 @@
 {
     "skills": [
         {
-            "skill": "React Native",
-            "icon": "/icons/react.png",
-            "skill_info": "Smartess",
-            "number_of_years": "2+",
-            "alt": "React Native"
-        },
-        {
             "skill": "Algorithms",
             "icon": "/icons/algo.png",
             "skill_info": "Mcgill - Computer Science Competition",
@@ -15,18 +8,25 @@
             "alt": "Algorithms"
         },
         {
-            "skill": "HTML & CSS",
-            "icon": "/icons/html.png",
-            "skill_info": "This website- BodyCad",
-            "number_of_years": "2+",
-            "alt": "HTML & CSS"
-        },
-        {
             "skill": "Data Structures",
             "icon": "/icons/data.png",
-            "skill_info": "Mcgill - IEEE - Computer Science Competition",
+            "skill_info": "Mcgill - IEEE - Computer Science Competition - Autodesk",
             "number_of_years": "5+",
             "alt": "Data Structures"
+        },
+        {
+            "skill": "Python",
+            "icon": "/icons/python.png",
+            "skill_info": "Mcgill - LightHouseLabs - Programming Competitions",
+            "number_of_years": "5+",
+            "alt": "Python"
+        },
+        {
+            "skill": "Java",
+            "icon": "/icons/java.png",
+            "skill_info": "Mcgill - Autodesk",
+            "number_of_years": "5+",
+            "alt": "Java"
         },
         {
             "skill": "TS & JS",
@@ -36,18 +36,46 @@
             "alt": "TS & JS"
         },
         {
+            "skill": "Figma",
+            "icon": "/icons/figma.png",
+            "skill_info": "Smartess - This website - Concordia Capstone Shareholder",
+            "number_of_years": "3+",
+            "alt": "Figma"
+        },
+        {
+            "skill": "Data Science",
+            "icon": "/icons/data.png",
+            "skill_info": "Mcgill - LightHouseLabs - Programming Competitions",
+            "number_of_years": "3+",
+            "alt": "Data Science"
+        },
+        {
+            "skill": "SQL",
+            "icon": "/icons/data.png",
+            "skill_info": "Mcgill - Autodesk",
+            "number_of_years": "3+",
+            "alt": "SQL"
+        },
+        {
+            "skill": "React Native",
+            "icon": "/icons/react.png",
+            "skill_info": "Smartess",
+            "number_of_years": "2+",
+            "alt": "React Native"
+        },
+        {
+            "skill": "HTML & CSS",
+            "icon": "/icons/html.png",
+            "skill_info": "This website- BodyCad",
+            "number_of_years": "2+",
+            "alt": "HTML & CSS"
+        },
+        {
             "skill": "React.js",
             "icon": "/icons/react.png",
             "skill_info": "This website- BodyCad",
             "number_of_years": "2+",
             "alt": "React.js"
-        },
-        {
-            "skill": "Python",
-            "icon": "/icons/python.png",
-            "skill_info": "Mcgill - LightHouseLabs - Programming Competitions",
-            "number_of_years": "5+",
-            "alt": "Python"
         },
         {
             "skill": "Node.js",
@@ -66,23 +94,9 @@
         {
             "skill": "Docker",
             "icon": "/icons/docker.png",
-            "skill_info": "Smartess",
+            "skill_info": "Smartess - Autodesk",
             "number_of_years": "1+",
             "alt": "Docker"
-        },
-        {
-            "skill": "Figma",
-            "icon": "/icons/figma.png",
-            "skill_info": "Smartess - This website - Concordia Capstone Shareholder",
-            "number_of_years": "3+",
-            "alt": "Figma"
-        },
-        {
-            "skill": "Data Science",
-            "icon": "/icons/data.png",
-            "skill_info": "Mcgill - LightHouseLabs - Programming Competitions",
-            "number_of_years": "3+",
-            "alt": "Data Science"
         },
         {
             "skill": "C#",
@@ -90,13 +104,6 @@
             "skill_info": "Inovestor - Brebeuf - Mcgill",
             "number_of_years": "1+",
             "alt": "C#"
-        },
-        {
-            "skill": "Java",
-            "icon": "/icons/java.png",
-            "skill_info": "Mcgill",
-            "number_of_years": "3+",
-            "alt": "Java"
         }
     ]
 }

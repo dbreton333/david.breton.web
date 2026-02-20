@@ -1,13 +1,22 @@
 {
     "experiences": [
         {
+            "CompanyName": "AUTODESK",
+            "CompanyLogo": "/images/autodesk.png",
+            "ref": "https://www.autodesk.com",
+            "StartingDate": "FEB 2025",
+            "EndingDate": "PRESENT",
+            "topic": "Software Developer",
+            "description": "As part of the APS Forge team, I help shape the future of design by making client data more granular and interconnected—enabling collaboration, intelligent decisions, and AI-driven guidance throughout the design process. I navigate a massive, evolving codebase blending cutting-edge innovation with legacy systems. One highlight: designing a graph-traversal algorithm that cut Fusion 360 bill of materials render times in half by prioritizing the most relevant assets first. I also rotated as Scrum Master, ensuring smooth sprint progress and maintaining customer satisfaction. My work spans SDK development, database optimization, API and security design, entity-component systems, AWS infrastructure, and more. This role introduced me to AI-assisted coding, dramatically boosting my productivity and effectiveness as a developer."
+        },
+        {
             "CompanyName": "SMARTESS",
             "CompanyLogo": "/images/smartess.png",
             "ref": "https://www.linkedin.com/company/smartessca/posts/?feedView=all",
             "StartingDate": "JUL 2022",
             "EndingDate": "DEC 2024",
             "topic": "Freelance Software Developer and Co-Founder",
-            "description": "During my tenure at Smartess, I was responsible for developping a software that focuses on creating a smart home ecosystem for a client who is a major player in the real estate industry in montreal. My team and I developped a mobile app available both on iOS and Android that allows users to control various aspects of their house or building, such as lighting, temperature, locks and security systems. Our focus was on creating a technology that is easy to install and use, without requiring a lot of technical expertise, with an emphasis on plug-and-play features and pre-automation to make it as simple as possible for the user.  The solutions has a growing community that will reach above 70 chalets by the end of 2028."
+            "description": "Smartess began as a freelance contract that my co-founder Émile and I took on while still students, but it quickly grew into a full-scale startup, placing major responsibility in our hands and requiring us to learn and adapt on the spot. I led the development of a smart-home ecosystem for a prominent Montreal real-estate client, guiding the creation of an iOS/Android app to control lighting, temperature, locks, and security systems with seamless plug-and-play setup and pre-automation. Alongside mobile and system development, I contributed to software design, business strategy, and project management. The platform also builds a user community for sharing information and managing shared devices, with adoption projected to exceed 70 chalets by 2028."
         },
         {
             "CompanyName": "INOVESTOR",

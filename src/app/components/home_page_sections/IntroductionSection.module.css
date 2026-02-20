@@ -55,6 +55,8 @@
     aspect-ratio: 1;
     position: relative;
     max-width: 900px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 .information {
@@ -97,6 +99,11 @@
     height: 100%;
     aspect-ratio: 1;
     position: relative;
+    transition: filter 0.3s ease;
+}
+
+.social_media_icon:hover {
+    filter: brightness(0.5) grayscale(100%);
 }
 
 .bottom_hidden {

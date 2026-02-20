@@ -1,0 +1,217 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+.startScreen {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.startScreen h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.startScreen p {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gameHeader {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gameHeader h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.gameInfo {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.label {
+  font-size: 0.9rem;
+  color: #c3cad5;
+  font-weight: 500;
+}
+
+.value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f5f5f5;
+}
+
+.message {
+  background-color: #e3f2fd;
+  border: 1px solid #2196f3;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 500;
+  color: #1976d2;
+}
+
+.gameOver {
+  background-color: #f5f5f5;
+  border: 2px solid #333;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gameOver h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.winText {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4caf50;
+  margin: 15px 0;
+}
+
+.loseText {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #f44336;
+  margin: 15px 0;
+}
+
+.gameOver p {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 10px 0;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #2196f3;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+  background-color: #1976d2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.confirmButton {
+  background-color: #4caf50;
+}
+
+.confirmButton:hover {
+  background-color: #45a049;
+}
+
+.cancelButton {
+  background-color: #f44336;
+}
+
+.cancelButton:hover {
+  background-color: #da190b;
+}
+
+.selectedAIButton {
+  background-color: #ff9800 !important;
+  border: 3px solid #fff;
+}
+
+.selectedAIButton:hover {
+  background-color: #f57c00 !important;
+}
+
+.aiVsAiButton {
+  background-color: #9c27b0;
+}
+
+.aiVsAiButton:hover {
+  background-color: #7b1fa2;
+}
+
+.selectedSpeedButton {
+  background-color: #4caf50 !important;
+  border: 3px solid #fff;
+}
+
+.selectedSpeedButton:hover {
+  background-color: #45a049 !important;
+}
+
+@media (max-width: 768px) {
+  .startScreen h1 {
+    font-size: 2rem;
+  }
+
+  .startScreen p {
+    font-size: 1rem;
+  }
+
+  .gameHeader h2 {
+    font-size: 1.5rem;
+  }
+
+  .gameInfo {
+    gap: 15px;
+  }
+
+  .value {
+    font-size: 1.2rem;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

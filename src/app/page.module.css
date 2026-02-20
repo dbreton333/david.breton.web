@@ -23,3 +23,11 @@
   background-color: #2B313C;
 }
 
+.portfolioContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 40px 8%;
+  min-height: 100vh;
+}
+

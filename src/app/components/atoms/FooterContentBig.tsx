@@ -17,7 +17,14 @@ export const FooterContentBig = () => {
             <div className={styles.left_content}>
             <div className={styles.profile}>
                 <div className={styles.profile_image}>
-                    <Image src="/images/my_image.png" alt="David Breton" fill={true}/>
+                    <Image
+                      src="/images/my_image_new.png"
+                      alt="David Breton"
+                      fill={true}
+                      loading="lazy"
+                      sizes="200px"
+                      style={{ objectFit: 'cover' }}
+                    />
                 </div>
                 <div className={styles.profile_text}>
                     <h1 className={`${styles.name} h4`}>David Breton</h1>
