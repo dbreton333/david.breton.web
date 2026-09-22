@@ -1,155 +1,73 @@
 'use client'
-import { useState, useEffect, useMemo } from 'react';
-import styles from './IntroductionSection.module.css';
 import Image from 'next/image';
-//import LinkButton from '../atoms/LinkButton';
 import Link from 'next/link';
+import styles from './IntroductionSection.module.css';
+import { Marquee } from '../atoms/Marquee';
+import { WordReveal } from '../atoms/WordReveal';
+import { Reveal } from '../atoms/Reveal';
+import { LocationBadge } from '../atoms/LocationBadge';
 
-const useTypewriter = (text: string, speed = 20, postEffect: (value: boolean) => void) => {
-  const [index, setIndex] = useState(0);
-  const displayText = useMemo(() => text.slice(0, index), [index]);
-  useEffect(() => {
-    if (index >= text.length){
-      postEffect(true);
-      return;
-    }
-      
-    const timeoutId = setTimeout(() => {
-      setIndex(i => i + 1);
-    }, speed);
-
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, [index, text, speed]);
-
-  return displayText;
-};
+const SOCIALS = [
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/david-breton-72564417b/' },
+    { label: 'GitHub', href: 'https://github.com/dbreton333' },
+    { label: 'Instagram', href: 'https://www.instagram.com/biscuit_breton/' },
+];
 
 const Introduction = () => {
-    const [showParagraph, setShowParagraph] = useState(false);
-    const myname = useTypewriter("David Breton", 100, setShowParagraph);
-
-    
     return (
-        <div className={`${styles.content} height_intro`}>
-
-          <div className={styles.top_section}>
-            <div className={`${styles.left_content}`}>
-                <div className={styles.section_devider}/>
-                <h1 className={`${styles.title} font-bold h1`}>
-                  Nice to meet you, <br/>
-                  I&apos;m <span>{myname}</span>
-                </h1>
-        
-                <p className={`${showParagraph ? styles.fade_in :styles.hide } ${styles.hidden} ${styles.paragraph} font-light p`}>
-                  As a dynamic Computer Engineer with a strong  background in computer science competitions, 
-                  active committee  involvement, and a diverse portfolio of software projects, 
-                  I&apos;ve honed my skills as a proficient problem solver, full-stack developer, and  
-                  effective leader.
-                </p>
-                {/* <div className={`${showParagraph ? styles.fade_in :styles.hide } ${styles.link_button_frame}`}>
-                  <LinkButton href="/about" text="Learn more about me" textSize='p' arrowSize={20}/>
-                </div> */}
-                <div className={ `${showParagraph ? styles.fade_in :styles.hide } ${styles.hidden} ${styles.devider}`}/>
-                <h1 className={`${showParagraph ? styles.fade_in :styles.hide } ${styles.hidden} ${styles.paragraph} font-bold h6`}>
-                  FOLLOW ME
-                </h1>
-                <div className={` ${showParagraph ? styles.fade_in :styles.hide } ${styles.hidden} ${styles.social_media}`}>
-                    <div className={styles.social_media_icon}>
-                      <Link href="https://www.linkedin.com/in/david-breton-72564417b/">
-                      <Image
-                          src="/icons/linkedin.svg"
-                          alt="LinkedIn"
-                          fill={true}
-                          className={"object-contain"}
-                      />
-                      </Link>
-                    </div>
-                    <div className={styles.social_media_icon}>
-                      <Link href="https://github.com/dbreton333">
-                      <Image
-                          src="/icons/github.svg"
-                          alt="GitHub"
-                          fill={true}
-                          className={"object-contain"}
-                      />
-                      </Link>
-                    </div>
-                    <div className={styles.social_media_icon}>
-                      <Link href="https://www.instagram.com/biscuit_breton/">
-                      <Image
-                          src="/icons/instagram.svg"
-                          alt="Instagram"
-                          fill={true}
-                          className={"object-contain"}
-                      />
-                      </Link>
-                    </div>
-                  </div>
-              
-            </div>
-
-            <div className={styles.right_content}>
-              <div className={styles.image_content}>
-                <Image
-                  src="/images/my_image_new.png"
-                  alt="David Breton"
-                  fill={true}
-                  priority
-                  sizes="(max-width: 900px) 100vw, 45vw"
-                  style={{ objectFit: 'cover' }}
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.bottom_hidden}>
-              <p className={`${showParagraph ? styles.fade_in :styles.hide }  ${styles.paragraph} font-light p`}>
-                As a dynamic Computer Engineer with a strong  background in computer science competitions, 
-                active committee  involvement, and a diverse portfolio of software projects, 
-                I&apos;ve honed my skills as a proficient problem solver, full-stack developer, and  
-                effective leader.
-              </p>
-              {/* <div className={`${showParagraph ? styles.fade_in :styles.hide } ${styles.link_button_frame}`}>
-                <LinkButton href="/about" text="Learn more about me" textSize='p' arrowSize={20}/>
-              </div> */}
-              <div className={ `${showParagraph ? styles.fade_in :styles.hide } ${styles.devider}`}/>
-              <h1 className={`${showParagraph ? styles.fade_in :styles.hide } ${styles.paragraph} font-bold h6`}>
-                FOLLOW ME
-              </h1>
-              <div className={` ${showParagraph ? styles.fade_in :styles.hide } ${styles.social_media}`}>
-                  <div className={styles.social_media_icon}>
-                    <Link href="https://www.linkedin.com/in/david-breton-72564417b/">
-                    <Image
-                        src="/icons/linkedin.svg"
-                        alt="LinkedIn"
-                        fill={true}
-                        className={"object-contain"}
-                    />
-                    </Link>
-                  </div>
-                  <div className={styles.social_media_icon}>
-                    <Link href="https://github.com/dbreton333">
-                    <Image
-                        src="/icons/github.svg"
-                        alt="GitHub"
-                        fill={true}
-                        className={"object-contain"}
-                    />
-                    </Link>
-                  </div>
-                  <div className={styles.social_media_icon}>
-                    <Link href="https://www.instagram.com/biscuit_breton/">
-                    <Image
-                        src="/icons/instagram.svg"
-                        alt="Instagram"
-                        fill={true}
-                        className={"object-contain"}
-                    />
-                    </Link>
-                  </div>
+        <div className={styles.content}>
+            <div className={styles.stage}>
+                <div className={styles.name_marquee}>
+                    <Marquee text="DAVID BRETON" speed={28} />
                 </div>
+                <div className={styles.photo_frame}>
+                    <Image
+                        src="/images/david-portrait.png"
+                        alt="David Breton"
+                        fill
+                        priority
+                        sizes="(max-width: 900px) 70vw, 42vw"
+                        style={{ objectFit: 'cover', objectPosition: 'top' }}
+                    />
+                </div>
+                <LocationBadge location="Canada" className={styles.location_badge} />
+
+                <Reveal as="div" delay={200} className={styles.marker}>
+                    <svg className={styles.marker_arrow} width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 8L20 20M20 20V9M20 20H9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    <p className={`${styles.marker_text} h5`}>
+                        Computer Engineer<br />Problem-Solver &amp; Builder
+                    </p>
+                </Reveal>
+            </div>
+
+            <div className={styles.lower_panel}>
+                <div className={styles.statement}>
+                    <WordReveal
+                        text="I solve hard problems by rallying the right people around me."
+                        className={`${styles.headline} h1 font-semibold`}
+                    />
+                </div>
+
+                <Reveal as="div" delay={150} className={styles.bio_row}>
+                    <p className={`${styles.paragraph} p font-light`}>
+                        I solve complex problems with simple, effective solutions &mdash; and I say so when
+                        something isn&apos;t working, because direct communication is what moves projects
+                        forward. Problem-solver, builder, and someone who enjoys the people side of
+                        engineering as much as the technical side. From co-founding a startup to shipping
+                        software at a leading tech company, I&apos;ve consistently turned ambiguous problems
+                        into results.
+                    </p>
+
+                    <div className={styles.socials}>
+                        {SOCIALS.map((social) => (
+                            <Link key={social.label} href={social.href} className={`${styles.social_link} sub`}>
+                                {social.label}
+                            </Link>
+                        ))}
+                    </div>
+                </Reveal>
             </div>
         </div>
     );

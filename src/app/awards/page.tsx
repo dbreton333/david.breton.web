@@ -3,20 +3,18 @@ import styles from "../page.module.css";
 import NavBar from "../components/NavBar";
 import { AwardContent } from "../components/award_page_sections/AwardContent";
 import Footer from "../components/Footer";
-import { AnimatedBackgound } from "../components/molecules/AnimatedBackground";
 
 
 export default function Awards() {
   return (
     <div className={styles.main}>
-       <AnimatedBackgound/>
-      <div className={styles.container}>
-          <NavBar/>   
-      </div> 
-      <div className={styles.container}>
-        <AwardContent/>
+      <div className={`${styles.container} ${styles.light}`}>
+          <NavBar/>
+          <div className={styles.section} style={{ paddingLeft: 0, paddingRight: 0, paddingTop: 0 }}>
+            <AwardContent/>
+          </div>
       </div>
       <Footer/>
-    </div>  
+    </div>
   );
 }

@@ -1,180 +1,90 @@
 .content {
     display: flex;
-    flex-direction: column;
-    align-items: space-between;
-    justify-content: space-between;
-    width: 100%;
-    padding-top: 8%;
-    padding-bottom: 8%;
-}
-
-.header {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 50px;
-}
-
-.slash {
-    color: #075FE4;
-}
-
-.information {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-}
-
-.right_content {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 48%;
-    height: 100%;
+    gap: clamp(32px, 6vw, 80px);
+    width: 100%;
 }
 
-.left_content {
+.text_content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
-    height: 100%;
-    width: 48%;
+    gap: 20px;
+    width: 50%;
+}
+
+.title {
+    letter-spacing: -0.025em;
+    max-width: 26ch;
+}
+
+.text_body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 .paragraph {
-    color: #C3CAD5;  
-    margin-top: 40px;
-    margin-bottom: 40px;
+    opacity: 0.65;
+    max-width: 48ch;
 }
 
 .link_button_frame {
+    margin-top: 12px;
+}
+
+.photo_content {
+    width: 52%;
+    max-width: 546px;
+    align-self: flex-end;
+    /* Bleed the photo down through this section's own bottom padding so it
+       lands flush on the seam with the dark section below, the same way the
+       hero portrait sits right on the stage/lower-panel boundary. Must match
+       page.module.css's `.section` padding exactly, or a gap (or overlap)
+       reappears. */
+    margin-bottom: clamp(-120px, -8vw, -56px);
+    /* Same trick sideways: cancel the section's own left padding (also a
+       flat 8%, see page.module.css `.section`) so the cutout's edge is glued
+       to the literal left edge of the viewport instead of floating inside
+       the section's padded column. A plain `-8%` here isn't enough: it's a
+       percentage of `.content`'s width, which is already inset by that same
+       8% padding on both sides (84% of the section), so it under-corrects.
+       Scaling back up by /0.84 cancels the padding exactly. */
+    margin-left: calc(-8% / 0.84);
+}
+
+.photo_frame {
+    position: relative;
     width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-
-.link_button_frame_hidden {
-    display: none;
-}
-
-.award_count {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-}
-
-.podiums {
-    display: flex;
-    width: 50%;
-    align-items: first baseline;
-}
-
-.podiums_nbr {
-    color: #075FE4
-}
-
-.wins {
-    display: flex;
-    width: 50%;
-    align-items: first baseline;
-}
-
-.wins_nbr {
-    color: #FF9E2C
+    aspect-ratio: 2298 / 3040;
 }
 
 @media screen and (max-width: 800px) {
-    .award_count {
-        display: flex;
+    .content {
         flex-direction: column;
         align-items: flex-start;
-        justify-content: flex-start;
-        width: 100%;
-    }
-    .podiums {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        align-items: first baseline;
     }
 
-    .wins {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        align-items: first baseline;
-    }
-    
-}
-
-
-@media screen and (max-width: 768px) {
-    .award_count {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: flex-start;
+    .text_content,
+    .photo_content {
         width: 100%;
     }
 
-    .header {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        margin-bottom: 30px;
-    }
- 
-    .information {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        height: 100%;
+    /* Stacked layout reads better text-first, photo last (the reverse of the
+       DOM order, which puts the photo first so it can sit on the left on
+       desktop). The bleed tricks stay on though — same bottom-left glue,
+       just anchored to flex-start instead of flex-end since there's no row
+       to hug the end of anymore. */
+    .text_content {
+        order: 1;
     }
 
-
-    .left_content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        height: 100%;
-        width: 100%;
-        padding-top: 20px;
+    .photo_content {
+        order: 2;
+        max-width: 420px;
+        align-self: flex-start;
+        margin-top: 24px;
     }
-
-    .right_content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding-top: 20px;
-        width: 100%;
-        height: 100%;
-        margin-left: 0px;
-    }
-
-    .link_button_frame {
-      display: none;
-    }
-    
-
-    .link_button_frame_hidden {
-        display: flex;
-        width: 100%;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
 }

@@ -2,16 +2,16 @@
 import styles from "../page.module.css";
 import NavBar from "../components/NavBar";
 import {ComingSoon} from "../components/molecules/ComingSoon";
-import { AnimatedBackgound } from "../components/molecules/AnimatedBackground";
+import Footer from "../components/Footer";
 
 export default function About() {
   return (
     <div className={styles.main}>
-      <AnimatedBackgound/>
-      <div className={styles.container}>
-          <NavBar/>   
+      <div className={`${styles.container} ${styles.light}`} style={{ minHeight: '100vh' }}>
+          <NavBar/>
+          <ComingSoon/>
       </div>
-      <ComingSoon/>
-    </div>  
+      <Footer/>
+    </div>
   );
 }

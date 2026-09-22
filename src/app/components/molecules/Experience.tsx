@@ -1,9 +1,9 @@
 'use client'
-import { useRef, useState, useEffect } from "react";
-import styles from "./Experience.module.css";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
+import styles from "./Experience.module.css";
+import { Reveal } from "../atoms/Reveal";
 
 interface ExperienceSectionProps {
     CompanyName: string,
@@ -16,65 +16,48 @@ interface ExperienceSectionProps {
 }
 
 const Experience = (props: ExperienceSectionProps) => {
-
-    const [isVisible, setIsVisible] = useState(false);
-    const ref = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setIsVisible(true);
-                    } else {
-                        setIsVisible(false);
-                    }
-                });
-            },
-            { threshold: 0.1 } // Trigger when 10% of the component is visible
-        );
-
-        if (ref.current) {
-            observer.observe(ref.current);
-        }
-
-        return () => {
-            if (ref.current) observer.unobserve(ref.current);
-        };
-    }, []);
+    const [open, setOpen] = useState(false);
 
     return (
-        <div ref={ref}  className={`${styles.experience_section} ${isVisible ? styles.visible : ""}`}>
-            <div className={styles.logo_frame}>
-                <div className={styles.logo}>
-                    <Link href={props.ref}>
-                        <Image src={props.CompanyLogo} fill={true} sizes="(max-width: 768px) 100px, 200px" alt="Company Logo" style={{ objectFit: 'contain' }}/>
-                    </Link>
+        <Reveal as="div" className={styles.row}>
+            <div className={styles.row_head}>
+                <Link
+                    href={props.ref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.logo_frame}
+                    aria-label={`Visit ${props.CompanyName}'s website`}
+                >
+                    <Image src={props.CompanyLogo} fill sizes="96px" alt={`${props.CompanyName} logo`} style={{ objectFit: 'contain' }} />
+                </Link>
+
+                <button
+                    type="button"
+                    className={styles.trigger}
+                    onClick={() => setOpen((v) => !v)}
+                    aria-expanded={open}
+                >
+                    <span className={`${styles.name} h1 font-semibold`}>{props.CompanyName}</span>
+
+                    <span className={styles.meta}>
+                        <span className={`${styles.topic} p`}>{props.topic}</span>
+                        <span className={`${styles.date} sub`}>{props.StartingDate} &mdash; {props.EndingDate}</span>
+                    </span>
+
+                    <svg className={`${styles.chevron} ${open ? styles.chevron_open : ""}`} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 6L8 11L13 6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                </button>
+            </div>
+
+            <div className={styles.panel} data-open={open}>
+                <div className={styles.panel_inner}>
+                    <p className={`${styles.paragraph} p font-light`}>
+                        {props.paragraph}
+                    </p>
                 </div>
             </div>
-            <div className={styles.content_frame}>
-                <div className={styles.topic_and_date_frame}>
-                    <div className={styles.title}>
-                        <h1 className={`${styles.name} h5`}>
-                            {props.CompanyName}
-                        </h1>
-                        <div className={styles.date_frame}>
-                            <h2 className={`${styles.date} p`}>{props.StartingDate}</h2>
-                            <h2 className={`${styles.slash} p`}> &nbsp; / &nbsp; </h2>
-                            <h2 className={`${styles.date} p`}> {props.EndingDate}</h2>
-                        </div>
-                    </div>
-                   
-                    <h1 className={`${styles.topic} h5`}>
-                        {props.topic}
-                    </h1>
-                </div>
-                <p className={`${styles.paragraph} p font-light`}>
-                 {props.paragraph}   
-                </p>
-            </div>
-            
-        </div>
+        </Reveal>
     );
 };
 

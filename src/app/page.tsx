@@ -8,38 +8,30 @@ import EducationSection from "./components/home_page_sections/EducationSection";
 import ExperienceSection from "./components/home_page_sections/ExperienceSection";
 import SkillSection from "./components/home_page_sections/SkillSection";
 import Footer from "./components/Footer";
-import { useEffect } from "react";
-import { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
 
 export default function Home() {
-
-  useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
-    })
-  }, []);
-
   return (
     <div className={styles.main}>
-      <div className={styles.container}>
+      <div className={`${styles.container} ${styles.dark}`}>
         <NavBar/>
         <Introduction/>
       </div>
-      <div className={styles.second_container}>
+      <div className={`${styles.section} ${styles.light}`}>
         <AwardsSection/>
       </div>
-      <InfiniteCarousel/>
-      <div className={styles.container}>
-        <EducationSection/>   
+      <div className={styles.dark}>
+        <InfiniteCarousel/>
       </div>
-      <div className={styles.second_container}>
+      <div className={`${styles.section} ${styles.light}`}>
+        <EducationSection/>
+      </div>
+      <div className={`${styles.section} ${styles.dark}`}>
         <ExperienceSection/>
       </div>
-      <div className={styles.container}>
+      <div className={`${styles.section} ${styles.light}`}>
         <SkillSection/>
       </div>
       <Footer/>
-    </div>  
+    </div>
   );
 }

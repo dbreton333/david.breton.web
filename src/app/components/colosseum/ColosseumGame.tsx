@@ -246,7 +246,7 @@ export const ColosseumGame: React.FC = () => {
           <p>Choose your settings and start playing!</p>
 
           <div style={{ marginBottom: '30px' }}>
-            <h3 style={{ color: '#fff', marginBottom: '15px' }}>Select AI Opponent:</h3>
+            <h3 style={{ marginBottom: '15px' }}>Select AI Opponent:</h3>
             <div className={styles.buttonGroup}>
               <button
                 onClick={() => setSelectedOpponentAI('basic')}
@@ -264,7 +264,7 @@ export const ColosseumGame: React.FC = () => {
           </div>
 
           <div style={{ marginBottom: '30px' }}>
-            <h3 style={{ color: '#fff', marginBottom: '15px' }}>Select Board Size:</h3>
+            <h3 style={{ marginBottom: '15px' }}>Select Board Size:</h3>
             <div className={styles.buttonGroup}>
               <button
                 onClick={() => setSelectedBoardSize(6)}
@@ -294,7 +294,7 @@ export const ColosseumGame: React.FC = () => {
           </div>
 
           <div>
-            <h3 style={{ color: '#fff', marginBottom: '15px' }}>Start Game:</h3>
+            <h3 style={{ marginBottom: '15px' }}>Start Game:</h3>
             <div className={styles.buttonGroup}>
               <button
                 onClick={() => {
@@ -354,27 +354,27 @@ export const ColosseumGame: React.FC = () => {
           <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap', marginBottom: '10px' }}>
             {player0AI !== null && (
               <>
-                <div style={{ color: '#c3cad5', fontSize: '0.9rem' }}>
-                  <strong style={{ color: '#ff9800' }}>Advanced AI:</strong> {winStats.advancedWins} wins
+                <div style={{ opacity: 0.65, fontSize: '0.9rem' }}>
+                  <strong style={{ opacity: 1 }}>Advanced AI:</strong> {winStats.advancedWins} wins
                 </div>
-                <div style={{ color: '#c3cad5', fontSize: '0.9rem' }}>
-                  <strong style={{ color: '#2196f3' }}>Basic AI:</strong> {winStats.basicWins} wins
+                <div style={{ opacity: 0.65, fontSize: '0.9rem' }}>
+                  <strong style={{ opacity: 1 }}>Basic AI:</strong> {winStats.basicWins} wins
                 </div>
-                <div style={{ color: '#c3cad5', fontSize: '0.9rem' }}>
-                  <strong>Ties:</strong> {winStats.ties}
+                <div style={{ opacity: 0.65, fontSize: '0.9rem' }}>
+                  <strong style={{ opacity: 1 }}>Ties:</strong> {winStats.ties}
                 </div>
               </>
             )}
             {player0AI === null && (
               <>
-                <div style={{ color: '#c3cad5', fontSize: '0.9rem' }}>
-                  <strong style={{ color: '#4caf50' }}>You:</strong> {winStats.humanWins} wins
+                <div style={{ opacity: 0.65, fontSize: '0.9rem' }}>
+                  <strong style={{ opacity: 1 }}>You:</strong> {winStats.humanWins} wins
                 </div>
-                <div style={{ color: '#c3cad5', fontSize: '0.9rem' }}>
-                  <strong style={{ color: '#f44336' }}>AI:</strong> {player1AI === 'advanced' ? winStats.advancedWins : winStats.basicWins} wins
+                <div style={{ opacity: 0.65, fontSize: '0.9rem' }}>
+                  <strong style={{ opacity: 1 }}>AI:</strong> {player1AI === 'advanced' ? winStats.advancedWins : winStats.basicWins} wins
                 </div>
-                <div style={{ color: '#c3cad5', fontSize: '0.9rem' }}>
-                  <strong>Ties:</strong> {winStats.ties}
+                <div style={{ opacity: 0.65, fontSize: '0.9rem' }}>
+                  <strong style={{ opacity: 1 }}>Ties:</strong> {winStats.ties}
                 </div>
               </>
             )}
@@ -391,7 +391,7 @@ export const ColosseumGame: React.FC = () => {
 
       {player0AI && (
         <div style={{ textAlign: 'center', marginBottom: '15px' }}>
-          <span style={{ color: '#c3cad5', marginRight: '10px', fontSize: '0.9rem' }}>AI Speed:</span>
+          <span style={{ opacity: 0.65, marginRight: '10px', fontSize: '0.9rem' }}>AI Speed:</span>
           <button
             onClick={() => setAiSpeed(1500)}
             className={`${styles.button} ${aiSpeed === 1500 ? styles.selectedSpeedButton : ''}`}

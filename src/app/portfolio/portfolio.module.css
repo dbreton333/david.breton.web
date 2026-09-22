@@ -1,0 +1,22 @@
+.intro {
+    max-width: min(90%, 820px);
+    padding-bottom: clamp(40px, 6vw, 64px);
+    border-bottom: 1px solid var(--hairline);
+}
+
+.title {
+    letter-spacing: -0.03em;
+}
+
+.paragraph {
+    margin-top: 18px;
+    opacity: 0.65;
+    max-width: 52ch;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: clamp(40px, 6vw, 64px);
+}

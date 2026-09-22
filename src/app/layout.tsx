@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Space_Grotesk } from 'next/font/google';
+import { Hanken_Grotesk } from 'next/font/google';
+import { FloatingNav } from './components/FloatingNav';
 
 export const metadata: Metadata = {
   title: "David Breton",
-  description: "David Breton personal website",
+  description: "Computer engineer building software that ships — from co-founding a startup to production systems at Autodesk.",
   icons: {
     icon: "./icons/favicon.ico",
     apple: "./icons/apple-touch-icon.png",
   }
 };
 
-const spaceGrotesk = Space_Grotesk({
+const hankenGrotesk = Hanken_Grotesk({
   subsets: ['latin'],
-  weight: ['300','400','500','600','700'],
-  variable: '--font-space-grotesk',
+  weight: ['300','400','500','600','700','800'],
+  variable: '--font-hanken-grotesk',
 });
 
 export default function RootLayout({
@@ -24,9 +25,10 @@ export default function RootLayout({
 }>) {
 
   return (
-    <html lang="en" className={spaceGrotesk.variable}>
+    <html lang="en" className={hankenGrotesk.variable}>
       <body>
         {children}
+        <FloatingNav />
       </body>
     </html>
   );

@@ -10,7 +10,7 @@ const SkillWidget = ({ item }) => {
                     <div className={styles.icon}>
                         <Image src={item.icon} alt={item.alt} fill={true} />
                     </div>
-                    <h2 className={`${styles.header} font-sem-bold`}>
+                    <h2 className={`${styles.header} font-semibold`}>
                         {item.skill}
                     </h2>
                     <p className={`${styles.paragraph}`}>
@@ -18,7 +18,7 @@ const SkillWidget = ({ item }) => {
                     </p>
                 </div>
                 <div className={styles.bottom}>
-                    <p className={`${styles.years} font-sem-bold`}>
+                    <p className={`${styles.years} font-semibold`}>
                         {item.number_of_years} years
                     </p>
                 </div>

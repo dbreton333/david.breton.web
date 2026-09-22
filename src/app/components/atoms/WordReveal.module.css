@@ -1,0 +1,32 @@
+.wrap {
+    display: inline;
+}
+
+.mask {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    padding-bottom: 0.08em;
+    margin-bottom: -0.08em;
+}
+
+.word {
+    display: inline-block;
+    transform: translateY(105%);
+    opacity: 0;
+    transition: transform 800ms var(--ease-out-expo), opacity 800ms var(--ease-out-expo);
+    will-change: transform, opacity;
+}
+
+.word.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .word {
+        transition: none;
+        transform: none;
+        opacity: 1;
+    }
+}

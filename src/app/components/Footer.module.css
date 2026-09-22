@@ -1,228 +1,221 @@
 .footer {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 10% 8% 6%;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.curve_gap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--paper);
+    z-index: 101;
+    pointer-events: none;
+}
+
+.curve {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    pointer-events: none;
+    line-height: 0;
+}
+
+.curve_svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.inner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: clamp(28px, 4vw, 48px);
+}
+
+.top {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: clamp(24px, 4vw, 48px);
+    flex-wrap: wrap;
+}
+
+.heading_row {
+    display: flex;
+    align-items: center;
+    gap: clamp(16px, 2.5vw, 28px);
+}
+
+.avatar {
+    position: relative;
+    width: clamp(72px, 8vw, 128px);
+    height: clamp(72px, 8vw, 128px);
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: var(--gray-900);
+}
+
+.headline {
+    letter-spacing: -0.03em;
+}
+
+.corner_arrow {
+    opacity: 0.6;
+    flex-shrink: 0;
+    margin-top: 8px;
+}
+
+.cta_row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    min-height: clamp(112px, 10vw, 156px);
+}
+
+.cta_line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--hairline-on-dark);
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.cta_button {
+    position: relative;
     z-index: 2;
 }
 
-
-.general_info {
+.contact_row {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    padding-top: 8%;
-    padding-bottom: 8%;
+    flex-wrap: wrap;
+    gap: clamp(16px, 3vw, 24px);
 }
 
-.footer_nav {
-    text-align: center;
-    height: 96px;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 8%;
-    padding-right: 8%;
-}
-
-.container {
-    display: flex;
-    width: 100%;
-    padding-left: 8%;
-    padding-right: 8%;
-}
-
-
-.left_content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    height: 100%;
-    width: 50%;
-}
-
-.profile {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    padding-bottom: 10%;
-    gap: 5%;
-}
-
-.profile_image {
-    width: 30%;
-    aspect-ratio: 1;
+.contact_pill {
     position: relative;
-    max-width: 200px;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-.profile_text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    height: 100%;
-    width: 80%;
-}
-
-.name {  
-    padding-bottom: 1%;
-    width: 100%;
-}
-
-.sub_name {
-    width: 100%;
-    color: #C3CAD5;
-}
-
-.social_media {
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
     align-items: center;
-    justify-content: space-between;
-    min-width: 80px;
-    width: 15%;
-    aspect-ratio: 4;
+    padding: clamp(14px, 1.6vw, 18px) clamp(24px, 3vw, 32px);
+    border-radius: 999px;
+    border: 1px solid var(--hairline-on-dark);
+    opacity: 0.9;
+    overflow: hidden;
+    transition: opacity var(--duration-hover) ease, border-color var(--duration-hover) ease;
 }
 
-.social_media_icon {
-    height: 100%;
-    aspect-ratio: 1;
+.contact_pill:hover {
+    opacity: 1;
+    border-color: var(--paper);
+}
+
+/* Same rising-blob fill as MagneticButton's .fill, reshaped for a wide pill
+   instead of a circle: a wider, taller organic blob that overflow:hidden
+   clips down to just the bit poking above the pill's bottom edge. */
+.pill_fill {
+    position: absolute;
+    left: 50%;
+    bottom: -70%;
+    width: 140%;
+    height: 220%;
+    background: var(--paper);
+    border-radius: 45% 45% 55% 55% / 60% 60% 40% 40%;
+    transform: translate(-50%, 100%) scale(0.7);
+    transition: transform 640ms cubic-bezier(0.22, 1, 0.36, 1), border-radius 640ms ease;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.contact_pill:hover .pill_fill {
+    transform: translate(-50%, -2%) scale(1.05);
+    border-radius: 50%;
+}
+
+.pill_label {
     position: relative;
+    z-index: 1;
+    transition: color 460ms ease;
 }
 
+.contact_pill:hover .pill_label {
+    color: var(--ink);
+}
 
-.right_content {
+.meta_row {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     justify-content: space-between;
-    height: 100%;
-    width: 50%;
+    flex-wrap: wrap;
+    gap: 24px;
 }
 
-.contact{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.title {
-    padding-top: 2%;
-    padding-bottom: 10%;
-}
-
-
-.paragraph {
-    padding-top: 2%;
-    padding-bottom: 2%;
-    color: #C3CAD5;
-}
-.link {
-    padding-top: 2%;
-    padding-bottom: 2%;
-}
-
-.email {
+.meta_block {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    height: 100%;
-    width: 40%;
+    gap: 10px;
 }
 
-.phone {
+.label {
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+
+.socials {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    height: 100%;
-    width: 40%;
+    gap: 20px;
 }
 
-.devider_footer {
-    height: 1px;
-    width: 100%;
-    background-color: #5D6C83;
+.socials a {
+    opacity: 0.75;
+    transition: opacity var(--duration-hover) ease;
 }
 
-
-.devider {
-    height: 1px;
-    width: 100%;
-    background-color: #5D6C83;
+.socials a:hover {
+    opacity: 1;
 }
 
-.placeholder {
-    display: flex;
-    width: 1%;
-    height: 100%;
-}
-
-.logo {
-    display: flex;
-    height: 100%;
-    width: 200px;
-    position: relative;
-}
-
-.list_items {
-    display: flex;
-    color: white;
-    font-family: var(--font-space-grotesk);
-    font-size: 24px;
-}
-
-.item{
-    margin-right: 15px;
-    margin-left: 15px;
-    color: white;
-    font-weight: 300;
-}
-
-.item:hover {
-    color: rgb(209 213 219);
-}
-
-.selected_item {
-    margin-right: 15px;
-    margin-left: 15px;
-    font-weight: 700;
-}
-
-
-@media screen and (max-width: 900px) {
-
-    .contact{
-        display: flex;
+@media screen and (max-width: 700px) {
+    .top {
         flex-direction: column;
         align-items: flex-start;
-        justify-content: space-between;
-        height: 100%;
+    }
+
+    .cta_row {
+        justify-content: center;
+    }
+
+    .contact_pill {
         width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .meta_row {
+        flex-direction: column;
     }
 }
 
-@media screen and (max-width: 1000px) {
-    .list_items {
-        display: none;
+@media (prefers-reduced-motion: reduce) {
+    .pill_fill {
+        transition: transform 200ms ease;
     }
 }
-
-
-
-
-
-

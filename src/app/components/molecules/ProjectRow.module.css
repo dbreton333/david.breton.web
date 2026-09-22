@@ -1,0 +1,68 @@
+.row {
+    position: relative;
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1.6fr) minmax(0, 1fr) 72px;
+    align-items: center;
+    column-gap: 24px;
+    padding: clamp(22px, 3vw, 32px) 0;
+    border-bottom: 1px solid var(--hairline);
+    color: currentColor;
+}
+
+.index {
+    opacity: 0.4;
+    font-variant-numeric: tabular-nums;
+}
+
+.name {
+    letter-spacing: -0.02em;
+    transition: opacity 350ms ease;
+}
+
+.row:hover .name {
+    opacity: 0.55;
+}
+
+.stack {
+    opacity: 0.55;
+}
+
+.year {
+    opacity: 0.55;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+.preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 280px;
+    aspect-ratio: 16 / 10;
+    border-radius: 10px;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 5;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+    transition: opacity 320ms ease, transform 420ms var(--ease-out-expo);
+}
+
+@media (max-width: 700px) {
+    .row {
+        grid-template-columns: 32px 1fr;
+        row-gap: 6px;
+    }
+
+    .stack {
+        grid-column: 2 / 3;
+        opacity: 0.5;
+    }
+
+    .year {
+        display: none;
+    }
+
+    .preview {
+        display: none;
+    }
+}

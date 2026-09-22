@@ -36,8 +36,8 @@ const SkillsCarousel = ({ skills }) => {
     return (
         <div className={styles.carousel_container}>
             <div className={styles.controls}>
-                <ArrowButton onClick={handlePrev} disabled={currentIndex === 0} icon="/icons/chevron_left.svg" direction="left" />
-                <ArrowButton onClick={handleNext} disabled={currentIndex + itemsPerView >= skills.length} icon="/icons/chevron_right.svg" direction="right" />
+                <ArrowButton onClick={handlePrev} disabled={currentIndex === 0} direction="left" />
+                <ArrowButton onClick={handleNext} disabled={currentIndex + itemsPerView >= skills.length} direction="right" />
             </div>
             <div className={styles.carousel}>
                 <div className={styles.carouselTrack}

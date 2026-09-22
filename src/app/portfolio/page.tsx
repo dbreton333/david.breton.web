@@ -1,40 +1,36 @@
 'use client'
 import styles from "../page.module.css";
+import portfolioStyles from "./portfolio.module.css";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import { GameRules } from "../components/colosseum/GameRules";
-import dynamic from 'next/dynamic';
+import { Reveal } from "../components/atoms/Reveal";
+import { ProjectRow } from "../components/molecules/ProjectRow";
+import { projects } from "../data/projects";
 
-const ColosseumGame = dynamic(
-  () => import("../components/colosseum/ColosseumGame").then(mod => ({ default: mod.ColosseumGame })),
-  {
-    ssr: false,
-    loading: () => (
-      <div style={{
-        textAlign: 'center',
-        padding: '60px 20px',
-        fontSize: '1.2rem',
-        color: '#c3cad5',
-        minHeight: '400px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
-      }}>
-        Loading Colosseum Survival...
-      </div>
-    )
-  }
-);
-
-export default function Home() {
+export default function Portfolio() {
   return (
     <div className={styles.main}>
-      <div className={styles.container}>
+      <div className={`${styles.container} ${styles.light}`}>
         <NavBar/>
-      </div>
-      <div className={styles.portfolioContent}>
-        <ColosseumGame/>
-        <GameRules/>
+        <div className={portfolioStyles.intro}>
+          <Reveal>
+            <h1 className={`${portfolioStyles.title} h1 font-semibold`}>
+              A working list of things I&apos;ve built.
+            </h1>
+            <p className={`${portfolioStyles.paragraph} p font-light`}>
+              Side projects, competitions, and experiments &mdash; each one grew out of a
+              problem I wanted to actually solve, not just a demo.
+            </p>
+          </Reveal>
+        </div>
+
+        <div className={portfolioStyles.list}>
+          {projects.map((project, index) => (
+            <Reveal key={project.slug} delay={index * 80}>
+              <ProjectRow project={project} index={index} />
+            </Reveal>
+          ))}
+        </div>
       </div>
       <Footer/>
     </div>

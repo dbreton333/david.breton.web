@@ -2,37 +2,25 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
-    height: 100%;
     width: 100%;
-    padding-top: 8%;
-    padding-bottom: 8%;
 }
 
-.slash {
-    color: #075FE4;
+.intro {
+    max-width: min(90%, 780px);
 }
 
-.title_devider {
-    height: 1px;
-    width: 100%;
-    background-color: #5D6C83;
-    margin-top: 40px;
+.title {
+    letter-spacing: -0.03em;
 }
 
-
-
-.devider {
-    height: 1px;
-    width: 100%;
-    background-color: #5D6C83;
+.paragraph {
+    margin-top: 16px;
+    opacity: 0.6;
 }
-
 
 .experience_content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     width: 100%;
+    margin-top: clamp(32px, 5vw, 56px);
 }

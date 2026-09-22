@@ -1,21 +1,19 @@
 .rulesContainer {
   max-width: 800px;
-  margin: 40px auto;
-  padding: 30px;
-  background-color: #e8e8e8;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  width: 100%;
   line-height: 1.6;
-  color: #333;
+  color: var(--ink);
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: clamp(1.75rem, 1.5rem + 1vw, 2.25rem);
   text-align: center;
   margin-bottom: 30px;
-  color: #2196f3;
-  border-bottom: 3px solid #2196f3;
-  padding-bottom: 15px;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--hairline-on-light);
 }
 
 .section {
@@ -23,17 +21,16 @@
 }
 
 .section h3 {
-  font-size: 1.5rem;
-  color: #333;
+  font-size: 1.35rem;
+  font-weight: 700;
   margin-bottom: 12px;
-  border-left: 4px solid #2196f3;
-  padding-left: 12px;
+  letter-spacing: -0.01em;
 }
 
 .section p {
   font-size: 1rem;
   margin-bottom: 12px;
-  color: #555;
+  opacity: 0.7;
 }
 
 .list {
@@ -44,26 +41,22 @@
 .list li {
   margin-bottom: 10px;
   font-size: 1rem;
-  color: #555;
+  opacity: 0.7;
 }
 
 .list li strong {
-  color: #2196f3;
+  opacity: 1;
+  color: var(--ink);
   font-weight: 600;
 }
 
 @media (max-width: 768px) {
-  .rulesContainer {
-    padding: 20px;
-    margin: 20px;
-  }
-
   .title {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .section h3 {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
   }
 
   .section p,
