@@ -40,7 +40,8 @@
 }
 
 .row_head:hover .logo_frame,
-.logo_frame:hover {
+.logo_frame:hover,
+.row[data-active="true"] .logo_frame {
     filter: grayscale(0);
     opacity: 1;
 }
@@ -54,10 +55,6 @@
     text-align: left;
     color: currentColor;
     flex-wrap: wrap;
-}
-
-.trigger[aria-disabled="true"] {
-    cursor: default;
 }
 
 .name {

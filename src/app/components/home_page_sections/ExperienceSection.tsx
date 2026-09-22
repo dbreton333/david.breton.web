@@ -14,7 +14,10 @@ const ExperienceSection = () => {
         // A thin band right across the vertical center of the viewport: a
         // row only counts as "centered" while it's crossing that band, so
         // scrolling naturally hands focus from one row to the next as they
-        // pass through the middle of the screen, carousel-style.
+        // pass through the middle of the screen, carousel-style. This only
+        // drives the highlight/dim treatment now — expanding a row no
+        // longer requires it to be the centered one, so this doesn't touch
+        // `expandedIndex` at all.
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
@@ -22,9 +25,6 @@ const ExperienceSection = () => {
                     const index = rowRefs.current.indexOf(entry.target as HTMLDivElement);
                     if (index === -1) return;
                     setActiveIndex(index);
-                    // Scrolling to a new row closes whatever was open — expansion
-                    // only ever follows the row currently centered.
-                    setExpandedIndex((prev) => (prev !== null && prev !== index ? null : prev));
                 });
             },
             { rootMargin: "-48% 0px -48% 0px", threshold: 0 }
@@ -35,29 +35,51 @@ const ExperienceSection = () => {
     }, []);
 
     useEffect(() => {
-        // The intersection band above only changes `activeIndex` once
-        // scroll has moved a whole row's worth of distance — far too
-        // coarse for "close the panel as soon as the user starts
-        // scrolling away". This watches scroll position directly instead,
-        // independent of which row it lands on, and collapses as soon as
-        // the page has moved more than a few pixels from where it was
-        // when the panel opened.
+        // Opening a row scrolls it to the middle of the screen, then — once
+        // that settles — watches for the user scrolling away and closes the
+        // panel once they've moved a reasonable distance from where it
+        // came to rest. Arming the watch only after settling (rather than
+        // at the moment of the click) matters: the scrollIntoView call
+        // below fires its own scroll events, which would otherwise trip
+        // the "moved away" check the instant the panel opens.
         if (expandedIndex === null) return;
 
-        const scrollYAtExpand = window.scrollY;
+        const el = rowRefs.current[expandedIndex];
+        el?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        let armed = false;
+        let scrollYAtSettle = 0;
+
         const onScroll = () => {
-            if (Math.abs(window.scrollY - scrollYAtExpand) > 20) {
+            if (!armed) return;
+            if (Math.abs(window.scrollY - scrollYAtSettle) > 120) {
                 setExpandedIndex(null);
             }
         };
 
+        const arm = () => {
+            if (armed) return;
+            armed = true;
+            scrollYAtSettle = window.scrollY;
+        };
+
         window.addEventListener('scroll', onScroll, { passive: true });
-        return () => window.removeEventListener('scroll', onScroll);
+        window.addEventListener('scrollend', arm, { once: true });
+        // Fallback for the case scrollIntoView doesn't actually move
+        // anything (the row's already centered) — "scrollend" then never
+        // fires, so this arms the watch anyway after a beat.
+        const fallback = window.setTimeout(arm, 700);
+
+        return () => {
+            window.removeEventListener('scroll', onScroll);
+            window.removeEventListener('scrollend', arm);
+            window.clearTimeout(fallback);
+        };
     }, [expandedIndex]);
 
     const handleToggle = (index: number) => {
-        // Only the centered row can be expanded.
-        if (index !== activeIndex) return;
+        // Any row can be expanded now — only the highlight/dim treatment
+        // stays tied to which one is actually centered.
         setExpandedIndex((prev) => (prev === index ? null : index));
     };
 

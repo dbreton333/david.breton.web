@@ -83,18 +83,21 @@
     color: var(--paper);
 }
 
+/* A muted, desaturated navy rather than the original bright/saturated
+   "electric" blue — reads as professional rather than a tech-startup
+   accent color. */
 .blue {
-    background: #075FE4;
-    border-color: #075FE4;
+    background: #2E5A87;
+    border-color: #2E5A87;
 }
 
 .blue .fill {
-    background: #0A4FB8;
+    background: #1F3D5C;
 }
 
 .blue:hover {
-    background: #075FE4;
-    border-color: #075FE4;
+    background: #2E5A87;
+    border-color: #2E5A87;
 }
 
 .blue .inner,

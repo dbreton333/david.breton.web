@@ -55,12 +55,13 @@ export const FloatingNav = () => {
             <div className={`${styles.trigger} ${visible || open ? styles.trigger_visible : ''}`}>
                 <MagneticButton
                     onClick={toggle}
-                    size="56px"
-                    proximity={24}
+                    size="clamp(72px, 6vw, 104px)"
+                    proximity={28}
                     ariaLabel={open ? 'Close menu' : 'Open menu'}
                     className={magneticStyles.blue}
                 >
                     <span className={`${styles.icon} ${open ? styles.icon_open : ''}`}>
+                        <span className={styles.icon_line} />
                         <span className={styles.icon_line} />
                         <span className={styles.icon_line} />
                     </span>

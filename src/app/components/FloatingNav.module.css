@@ -2,57 +2,96 @@
     position: fixed;
     top: clamp(16px, 3vw, 32px);
     right: clamp(16px, 4vw, 48px);
-    z-index: 60;
+    /* Above the footer's curve overlay (z-index up to 101) — this is a
+       persistent floating control and should never end up behind page
+       content, whatever that content's own stacking is doing. */
+    z-index: 200;
     color: var(--paper);
     opacity: 0;
-    transform: translateY(-12px);
+    transform: scale(0);
     pointer-events: none;
-    transition: opacity 420ms var(--ease-out-expo), transform 420ms var(--ease-out-expo);
+    /* Governs the exit only (scrolling back above the threshold): once
+       .trigger_visible is removed, its bounce animation goes with it, so
+       only this transition is left to shrink the button back down smoothly
+       instead of it snapping to scale(0) instantly. CSS animations always
+       take priority over a transition on the same property while the
+       animation is actually running, so this doesn't fight the entrance
+       bounce either. */
+    transition: opacity 320ms ease, transform 320ms ease;
 }
 
 .trigger_visible {
     opacity: 1;
-    transform: translateY(0);
     pointer-events: auto;
+    /* One bounce: the radius overshoots once, then settles — not a fade,
+       not a multi-oscillation spring. Runs once on entrance and then holds
+       (animation-fill-mode: forwards) at a fixed scale(1). Longhand
+       properties + a literal cubic-bezier (no shorthand, no var()) to
+       sidestep a shorthand-parsing issue that was silently dropping the
+       whole declaration. */
+    animation-name: bounce-in;
+    animation-duration: 620ms;
+    /* Plain ease-out, not a back/overshoot easing — the single overshoot
+       already comes from the 60% keyframe stop itself (scale 1.15). A
+       back-out easing applied to the 60%->100% segment too would overshoot
+       *again* settling down from 1.15 to 1, reading as a second bounce. */
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bounce-in {
+    0% {
+        transform: scale(0);
+    }
+    60% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .icon {
-    position: relative;
-    width: 18px;
-    height: 12px;
+    /* Drives both the icon's own height and the X-transform math below, so
+       the two stay in sync as the icon grows with the button on wide
+       viewports instead of the lines drifting off-center at larger sizes. */
+    --icon-h: clamp(18px, 1.5vw, 26px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: clamp(26px, 2.2vw, 37px);
+    height: var(--icon-h);
 }
 
 .icon_line {
-    position: absolute;
-    left: 0;
     width: 100%;
-    height: 1.5px;
+    height: 2px;
     background-color: currentColor;
-    transition: transform 0.3s var(--ease-out-expo), top 0.3s var(--ease-out-expo);
+    transform-origin: center;
+    transition: transform 0.3s var(--ease-out-expo), opacity 0.3s ease;
 }
 
-.icon_line:first-child {
-    top: 0;
+/* Classic hamburger-to-X: the outer two lines slide to the icon's vertical
+   center as they rotate (their own centers sit half the icon height minus
+   1px off-center in the space-between layout above), the middle line just
+   fades away. */
+.icon_open .icon_line:nth-child(1) {
+    transform: translateY(calc(var(--icon-h) / 2 - 1px)) rotate(45deg);
 }
 
-.icon_line:last-child {
-    top: 100%;
+.icon_open .icon_line:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
 }
 
-.icon_open .icon_line:first-child {
-    top: 50%;
-    transform: rotate(45deg);
-}
-
-.icon_open .icon_line:last-child {
-    top: 50%;
-    transform: rotate(-45deg);
+.icon_open .icon_line:nth-child(3) {
+    transform: translateY(calc(-1 * (var(--icon-h) / 2 - 1px))) rotate(-45deg);
 }
 
 .backdrop {
     position: fixed;
     inset: 0;
-    z-index: 50;
+    z-index: 190;
     background: rgba(0, 0, 0, 0.55);
     opacity: 0;
     pointer-events: none;
@@ -69,7 +108,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    z-index: 55;
+    z-index: 195;
     width: min(420px, 88vw);
     display: flex;
     flex-direction: column;
@@ -154,8 +193,18 @@
 @media (max-width: 800px) {
     .trigger {
         opacity: 1;
-        transform: translateY(0);
+        transform: scale(1);
         pointer-events: auto;
+    }
+
+    /* The button is permanently on screen at this breakpoint (the rule
+       above already holds it at full size regardless), so the entrance
+       bounce — tied to the scroll-triggered `.trigger_visible` class,
+       which still gets added once the threshold is crossed even though
+       nothing about visibility actually changes here — would otherwise
+       play on an already-visible button. */
+    .trigger_visible {
+        animation: none;
     }
 }
 
@@ -164,5 +213,11 @@
     .panel,
     .backdrop {
         transition: none;
+    }
+
+    .trigger_visible {
+        animation: none;
+        opacity: 1;
+        transform: scale(1);
     }
 }

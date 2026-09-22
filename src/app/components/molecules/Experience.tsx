@@ -37,7 +37,6 @@ const Experience = (props: ExperienceSectionProps) => {
                     className={styles.trigger}
                     onClick={onToggle}
                     aria-expanded={isExpanded}
-                    aria-disabled={!isActive}
                 >
                     <span className={`${styles.name} h1 font-semibold`}>{props.CompanyName}</span>
 
