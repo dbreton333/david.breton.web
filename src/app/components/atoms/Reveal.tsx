@@ -18,18 +18,39 @@ export const Reveal = ({ children, as: Tag = "div", delay = 0, className = "" }:
         const node = ref.current;
         if (!node) return;
 
-        const observer = new IntersectionObserver(
+        // Two separate observers rather than one toggling both ways: a
+        // single observer at threshold 0.15 fires its callback whenever
+        // the element crosses 15% visible in *either* direction, so small
+        // scroll jitter right around that point — common right as an
+        // element is entering or leaving the screen — flips `visible`
+        // back and forth rapidly, reading as a twitch. Splitting the
+        // enter and exit triggers apart lets each use whatever boundary
+        // actually suits it: entry keeps the original "reveal a bit
+        // before it's fully on screen" tuning, while exit only fires at
+        // a true 0%-overlap edge (threshold: 0, so there's no fuzzy
+        // interior percentage to jitter around) that's also pushed a
+        // good distance past the real viewport edge — so it only resets
+        // once the element is genuinely off screen, and then some.
+        const enterObserver = new IntersectionObserver(
             ([entry]) => {
-                // Toggle both ways (rather than latching true and
-                // unobserving) so the reveal replays every time the element
-                // re-enters view, not just the first time.
-                setVisible(entry.isIntersecting);
+                if (entry.isIntersecting) setVisible(true);
             },
             { threshold: 0.15, rootMargin: "0px 0px -10% 0px" }
         );
 
-        observer.observe(node);
-        return () => observer.disconnect();
+        const exitObserver = new IntersectionObserver(
+            ([entry]) => {
+                if (!entry.isIntersecting) setVisible(false);
+            },
+            { threshold: 0, rootMargin: "120px 0px 120px 0px" }
+        );
+
+        enterObserver.observe(node);
+        exitObserver.observe(node);
+        return () => {
+            enterObserver.disconnect();
+            exitObserver.disconnect();
+        };
     }, []);
 
     return (

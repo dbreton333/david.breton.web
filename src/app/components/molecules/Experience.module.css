@@ -110,7 +110,14 @@
 }
 
 .paragraph {
-    max-width: 68ch;
+    /* Widened to fill most of the row, but capped so it reliably finishes
+       before the date column above it. The date's own left edge (checked
+       across the shortest and longest job-title rows in the data, ~1478px
+       on a 1850px-wide row both times) barely moves regardless of topic
+       length — .meta is pinned to the row's right edge via margin-left:
+       auto — so a fixed 68% comfortably clears it with some margin, with
+       a px ceiling so it doesn't get silly-wide on ultra-wide screens. */
+    max-width: min(68%, 1300px);
     opacity: 0;
     padding: 0 0 clamp(24px, 4vw, 36px) calc(96px + clamp(20px, 3vw, 40px));
     transition: opacity 280ms ease;

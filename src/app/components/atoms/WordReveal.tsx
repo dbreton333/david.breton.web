@@ -18,18 +18,35 @@ export const WordReveal = ({ text, className = "", wordClassName = "", baseDelay
         const node = ref.current;
         if (!node) return;
 
-        const observer = new IntersectionObserver(
+        // Split into two observers (see Reveal.tsx for the full
+        // explanation): a single observer toggling both ways at threshold
+        // 0.2 flips back and forth on small scroll jitter right around
+        // that 20%-visible point, which is exactly what happens as an
+        // element is entering or leaving the screen — reading as a twitch.
+        // Entry keeps the original threshold; exit only fires at a true
+        // 0%-overlap edge, pushed a good distance past the real viewport
+        // edge, so the word-by-word reveal only resets once the element is
+        // genuinely off screen, and then some.
+        const enterObserver = new IntersectionObserver(
             ([entry]) => {
-                // Toggle both ways (rather than latching true and
-                // unobserving) so the word-by-word reveal replays every time
-                // the element re-enters view, not just the first time.
-                setVisible(entry.isIntersecting);
+                if (entry.isIntersecting) setVisible(true);
             },
             { threshold: 0.2 }
         );
 
-        observer.observe(node);
-        return () => observer.disconnect();
+        const exitObserver = new IntersectionObserver(
+            ([entry]) => {
+                if (!entry.isIntersecting) setVisible(false);
+            },
+            { threshold: 0, rootMargin: "120px 0px 120px 0px" }
+        );
+
+        enterObserver.observe(node);
+        exitObserver.observe(node);
+        return () => {
+            enterObserver.disconnect();
+            exitObserver.disconnect();
+        };
     }, []);
 
     const words = text.split(" ");
