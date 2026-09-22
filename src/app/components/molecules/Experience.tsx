@@ -1,9 +1,7 @@
 'use client'
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Experience.module.css";
-import { Reveal } from "../atoms/Reveal";
 
 interface ExperienceSectionProps {
     CompanyName: string,
@@ -13,13 +11,16 @@ interface ExperienceSectionProps {
     topic: string,
     paragraph: string
     ref: string
+    isActive: boolean
+    isExpanded: boolean
+    onToggle: () => void
 }
 
 const Experience = (props: ExperienceSectionProps) => {
-    const [open, setOpen] = useState(false);
+    const { isActive, isExpanded, onToggle } = props;
 
     return (
-        <Reveal as="div" className={styles.row}>
+        <div className={styles.row} data-active={isActive}>
             <div className={styles.row_head}>
                 <Link
                     href={props.ref}
@@ -34,8 +35,9 @@ const Experience = (props: ExperienceSectionProps) => {
                 <button
                     type="button"
                     className={styles.trigger}
-                    onClick={() => setOpen((v) => !v)}
-                    aria-expanded={open}
+                    onClick={onToggle}
+                    aria-expanded={isExpanded}
+                    aria-disabled={!isActive}
                 >
                     <span className={`${styles.name} h1 font-semibold`}>{props.CompanyName}</span>
 
@@ -44,20 +46,20 @@ const Experience = (props: ExperienceSectionProps) => {
                         <span className={`${styles.date} sub`}>{props.StartingDate} &mdash; {props.EndingDate}</span>
                     </span>
 
-                    <svg className={`${styles.chevron} ${open ? styles.chevron_open : ""}`} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className={`${styles.chevron} ${isExpanded ? styles.chevron_open : ""}`} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3 6L8 11L13 6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                 </button>
             </div>
 
-            <div className={styles.panel} data-open={open}>
+            <div className={styles.panel} data-open={isExpanded}>
                 <div className={styles.panel_inner}>
                     <p className={`${styles.paragraph} p font-light`}>
                         {props.paragraph}
                     </p>
                 </div>
             </div>
-        </Reveal>
+        </div>
     );
 };
 

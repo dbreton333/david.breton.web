@@ -1,10 +1,20 @@
 .row {
     width: 100%;
     border-bottom: 1px solid var(--hairline);
+    opacity: 0.35;
+    filter: grayscale(0.4);
+    transform: scale(0.985);
+    transition: opacity 460ms var(--ease-out-expo), transform 460ms var(--ease-out-expo), filter 460ms ease;
 }
 
 .row:last-child {
     border-bottom: none;
+}
+
+.row[data-active="true"] {
+    opacity: 1;
+    filter: grayscale(0);
+    transform: scale(1);
 }
 
 .row_head {
@@ -44,6 +54,10 @@
     text-align: left;
     color: currentColor;
     flex-wrap: wrap;
+}
+
+.trigger[aria-disabled="true"] {
+    cursor: default;
 }
 
 .name {
@@ -139,5 +153,12 @@
 
     .paragraph {
         padding-left: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .row {
+        transition: opacity 200ms ease;
+        transform: none;
     }
 }

@@ -20,10 +20,10 @@ export const Reveal = ({ children, as: Tag = "div", delay = 0, className = "" }:
 
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (entry.isIntersecting) {
-                    setVisible(true);
-                    observer.unobserve(node);
-                }
+                // Toggle both ways (rather than latching true and
+                // unobserving) so the reveal replays every time the element
+                // re-enters view, not just the first time.
+                setVisible(entry.isIntersecting);
             },
             { threshold: 0.15, rootMargin: "0px 0px -10% 0px" }
         );

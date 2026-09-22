@@ -71,6 +71,21 @@
     line-height: 1.4;
 }
 
+@media (min-width: 701px) {
+    .marker {
+        max-width: min(70%, 480px);
+    }
+
+    /* Ramps from the old h5 size at the mobile boundary (no jump right at
+       701px) up to 2x that by ~1400px wide, instead of jumping straight to
+       2x at the breakpoint — that jump was fine on wide desktop but way too
+       big at in-between (tablet/small-laptop) widths, where it collided
+       with the badge below it. */
+    .marker_text {
+        font-size: clamp(1.25rem, 2.86vw, 2.5rem);
+    }
+}
+
 .statement {
     max-width: min(90%, 1100px);
 }
@@ -112,13 +127,36 @@
 }
 
 @media (max-width: 700px) {
+    /* Two earlier attempts at "full screen" here both stretched the whole
+       stage to 100dvh, which just spread the same content out with a dead
+       gap in the middle. What was actually wanted: keep the stage's normal,
+       content-driven height (photo-sized, as it always was), but let the
+       marquee's own track bleed to the true left/right edges of the phone
+       instead of stopping at the page's 8% side padding. The stage's own
+       overflow:hidden would otherwise re-clip that bleed back down to the
+       padded width, so it's relaxed here and the marquee's own
+       overflow:hidden (see Marquee.module.css) takes over that job instead. */
+    .stage {
+        overflow: visible;
+    }
+
+    .name_marquee {
+        left: 50%;
+        right: auto;
+        width: 100vw;
+        transform: translateX(-50%);
+    }
+
     .photo_frame {
         width: 78%;
         margin-top: 16px;
+        margin-right: 0;
     }
 
     .marker {
-        top: 8%;
+        /* Beside the photo's head, but high enough to clear the
+           "Located in Canada" badge sitting right below it. */
+        top: 10%;
         z-index: 4;
         max-width: 60%;
         gap: 16px;

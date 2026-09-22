@@ -20,10 +20,10 @@ export const WordReveal = ({ text, className = "", wordClassName = "", baseDelay
 
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (entry.isIntersecting) {
-                    setVisible(true);
-                    observer.unobserve(node);
-                }
+                // Toggle both ways (rather than latching true and
+                // unobserving) so the word-by-word reveal replays every time
+                // the element re-enters view, not just the first time.
+                setVisible(entry.isIntersecting);
             },
             { threshold: 0.2 }
         );

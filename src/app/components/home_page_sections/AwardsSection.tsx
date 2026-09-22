@@ -22,7 +22,7 @@ const AwardsSection = () => {
             </Reveal>
 
             <div className={styles.text_content}>
-                <h2 className={`${styles.title} h2 font-semibold`}>
+                <h2 className={`${styles.title} h1 font-semibold`}>
                     <WordReveal text="Five podiums, three first-place finishes across national engineering competitions." />
                 </h2>
                 <Reveal delay={120} className={styles.text_body}>
