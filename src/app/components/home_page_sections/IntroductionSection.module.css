@@ -154,7 +154,11 @@
            and the bottom-anchored marquee, and makes the whole hero taller. */
         width: calc(78% * 0.9);
         margin-top: 64px;
-        margin-right: 0;
+        /* Bled a bit past the container's right padding (the stage is
+           overflow:visible here, same trick as the marquee) to shift the
+           photo further right, clearing more of it from under the marker
+           text so the headline stops landing over the face. */
+        margin-right: -24px;
     }
 
     .marker {
