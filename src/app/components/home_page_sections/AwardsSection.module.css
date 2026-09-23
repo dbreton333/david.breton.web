@@ -41,18 +41,21 @@
     align-self: flex-end;
     /* Bleed the photo down through this section's own bottom padding so it
        lands flush on the seam with the dark section below, the same way the
-       hero portrait sits right on the stage/lower-panel boundary. Must match
-       page.module.css's `.section` padding exactly, or a gap (or overlap)
-       reappears. */
-    margin-bottom: clamp(-120px, -8vw, -56px);
+       hero portrait sits right on the stage/lower-panel boundary. Matches
+       page.module.css's `.section` padding, plus an extra 2px of overshoot:
+       two independent percentage/vw-based calculations rounding to adjacent
+       pixels at some viewport widths left a hairline gap otherwise. A couple
+       px of *overlap* is invisible; a couple px of gap isn't. */
+    margin-bottom: clamp(-122px, calc(-8vw - 2px), -58px);
     /* Same trick sideways: cancel the section's own left padding (also a
        flat 8%, see page.module.css `.section`) so the cutout's edge is glued
        to the literal left edge of the viewport instead of floating inside
        the section's padded column. A plain `-8%` here isn't enough: it's a
        percentage of `.content`'s width, which is already inset by that same
        8% padding on both sides (84% of the section), so it under-corrects.
-       Scaling back up by /0.84 cancels the padding exactly. */
-    margin-left: calc(-8% / 0.84);
+       Scaling back up by /0.84 cancels the padding exactly; the extra 2px
+       is the same rounding-overshoot margin as above. */
+    margin-left: calc(-8% / 0.84 - 2px);
 }
 
 .photo_frame {
@@ -83,7 +86,8 @@
 
     .photo_content {
         order: 2;
-        max-width: 420px;
+        /* 15% smaller than the old 420px. */
+        max-width: calc(420px * 0.85);
         align-self: flex-start;
         margin-top: 24px;
     }

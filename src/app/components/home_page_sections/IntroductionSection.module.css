@@ -148,8 +148,12 @@
     }
 
     .photo_frame {
-        width: 78%;
-        margin-top: 16px;
+        /* 10% smaller than the old 78%. The stage's own height is driven
+           entirely by this box (the only non-absolutely-positioned child),
+           so pushing it down with a bigger margin-top both drops the photo
+           and the bottom-anchored marquee, and makes the whole hero taller. */
+        width: calc(78% * 0.9);
+        margin-top: 64px;
         margin-right: 0;
     }
 
