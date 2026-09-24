@@ -7,8 +7,8 @@ import { useMagnetic } from '../hooks/useMagnetic';
 
 const NAV_ITEMS = [
     { href: '/', label: 'Home' },
-    { href: '/portfolio', label: 'Portfolio' },
     { href: '/awards', label: 'Awards' },
+    { href: '/portfolio', label: 'Portfolio' },
     { href: '/about', label: 'About' },
 ];
 
