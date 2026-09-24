@@ -106,13 +106,29 @@
     z-index: 2;
 }
 
+.cta_reveal {
+    position: relative;
+    z-index: 2;
+}
+
 .contact_row {
     display: flex;
     flex-wrap: wrap;
     gap: clamp(16px, 3vw, 24px);
 }
 
+/* Padded hit-area for the magnetic pull (see useMagnetic), same trick as
+   NavBar's .item_zone: the negative margin cancels the padding out of the
+   layout so it doesn't visually add gap between the pills. */
+.pill_zone {
+    display: inline-flex;
+    padding: 16px;
+    margin: -16px;
+}
+
 .contact_pill {
+    --mx: 0px;
+    --my: 0px;
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -121,7 +137,9 @@
     border: 1px solid var(--hairline-on-dark);
     opacity: 0.9;
     overflow: hidden;
-    transition: opacity var(--duration-hover) ease, border-color var(--duration-hover) ease;
+    transform: translate(var(--mx), var(--my));
+    transition: opacity var(--duration-hover) ease, border-color var(--duration-hover) ease,
+                transform 400ms var(--ease-out-expo);
 }
 
 .contact_pill:hover {
@@ -203,6 +221,20 @@
         justify-content: center;
     }
 
+    /* The horizontal slide-in only makes sense against the wide desktop
+       layout's flush-right resting position; on phone the button is
+       centered instead, so fall back to the site's ordinary vertical
+       reveal. !important is needed to beat the inline --reveal-x/-y set
+       by Reveal's offsetX/offsetY props (see Footer.tsx). */
+    .cta_reveal {
+        --reveal-x: 0px !important;
+        --reveal-y: 32px !important;
+    }
+
+    .pill_zone {
+        width: 100%;
+    }
+
     .contact_pill {
         width: 100%;
         justify-content: center;
@@ -215,6 +247,11 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .contact_pill {
+        transition: opacity var(--duration-hover) ease, border-color var(--duration-hover) ease;
+        transform: none !important;
+    }
+
     .pill_fill {
         transition: transform 200ms ease;
     }

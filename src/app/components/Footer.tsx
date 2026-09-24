@@ -6,6 +6,7 @@ import { Reveal } from './atoms/Reveal';
 import { MagneticButton } from './atoms/MagneticButton';
 import magneticStyles from './atoms/MagneticButton.module.css';
 import { LocalTime } from './atoms/LocalTime';
+import { useMagnetic } from '../hooks/useMagnetic';
 
 const SOCIALS = [
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/david-breton-72564417b/' },
@@ -27,6 +28,10 @@ const Footer = () => {
     const [gapT, setGapT] = useState(0);
     const [bulgeT, setBulgeT] = useState(0);
     const [gapMax, setGapMax] = useState(DEFAULT_GAP_MAX);
+    // One hook instance per pill — each tracks its own element's cursor
+    // proximity independently, same pattern as NavBar's per-link magnetism.
+    const emailMagnetic = useMagnetic<HTMLAnchorElement>({ proximity: 24, strength: 0.35 });
+    const phoneMagnetic = useMagnetic<HTMLAnchorElement>({ proximity: 24, strength: 0.35 });
 
     useEffect(() => {
         const onScroll = () => {
@@ -128,23 +133,37 @@ const Footer = () => {
 
                 <div className={styles.cta_row}>
                     <div className={styles.cta_line} />
-                    <MagneticButton
-                        href="mailto:davidbreton03@gmail.com"
-                        className={`${magneticStyles.filled} ${styles.cta_button}`}
-                    >
-                        Get in touch
-                    </MagneticButton>
+                    <Reveal offsetX={-160} offsetY={0} className={styles.cta_reveal}>
+                        <MagneticButton
+                            href="mailto:davidbreton03@gmail.com"
+                            className={`${magneticStyles.filled} ${styles.cta_button}`}
+                        >
+                            Get in touch
+                        </MagneticButton>
+                    </Reveal>
                 </div>
 
                 <div className={styles.contact_row}>
-                    <a className={styles.contact_pill} href="mailto:davidbreton03@gmail.com">
-                        <span className={styles.pill_fill} aria-hidden="true" />
-                        <span className={`${styles.pill_label} h5`}>davidbreton03@gmail.com</span>
-                    </a>
-                    <a className={styles.contact_pill} href="tel:+15144524102">
-                        <span className={styles.pill_fill} aria-hidden="true" />
-                        <span className={`${styles.pill_label} h5`}>(514) 452-4102</span>
-                    </a>
+                    <div className={styles.pill_zone} {...emailMagnetic.zoneHandlers}>
+                        <a
+                            ref={emailMagnetic.ref}
+                            className={styles.contact_pill}
+                            href="mailto:davidbreton03@gmail.com"
+                        >
+                            <span className={styles.pill_fill} aria-hidden="true" />
+                            <span className={`${styles.pill_label} h5`}>davidbreton03@gmail.com</span>
+                        </a>
+                    </div>
+                    <div className={styles.pill_zone} {...phoneMagnetic.zoneHandlers}>
+                        <a
+                            ref={phoneMagnetic.ref}
+                            className={styles.contact_pill}
+                            href="tel:+15144524102"
+                        >
+                            <span className={styles.pill_fill} aria-hidden="true" />
+                            <span className={`${styles.pill_label} h5`}>(514) 452-4102</span>
+                        </a>
+                    </div>
                 </div>
 
                 <div className={styles.meta_row}>

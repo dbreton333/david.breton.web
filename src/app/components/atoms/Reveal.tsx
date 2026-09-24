@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useRef, useState } from "react";
-import type { ElementType, ReactNode } from "react";
+import type { CSSProperties, ElementType, ReactNode } from "react";
 import styles from "./Reveal.module.css";
 
 interface RevealProps {
@@ -8,9 +8,13 @@ interface RevealProps {
     as?: ElementType;
     delay?: number;
     className?: string;
+    // Pre-reveal offset in px, e.g. offsetX={-160} to slide in from the
+    // left instead of the default offsetY-only slide-up.
+    offsetX?: number;
+    offsetY?: number;
 }
 
-export const Reveal = ({ children, as: Tag = "div", delay = 0, className = "" }: RevealProps) => {
+export const Reveal = ({ children, as: Tag = "div", delay = 0, className = "", offsetX, offsetY }: RevealProps) => {
     const ref = useRef<HTMLElement | null>(null);
     const [visible, setVisible] = useState(false);
 
@@ -53,11 +57,15 @@ export const Reveal = ({ children, as: Tag = "div", delay = 0, className = "" }:
         };
     }, []);
 
+    const style: CSSProperties = { transitionDelay: `${delay}ms` };
+    if (offsetX !== undefined) (style as Record<string, string>)["--reveal-x"] = `${offsetX}px`;
+    if (offsetY !== undefined) (style as Record<string, string>)["--reveal-y"] = `${offsetY}px`;
+
     return (
         <Tag
             ref={ref}
             className={`${styles.reveal} ${visible ? styles.visible : ""} ${className}`}
-            style={{ transitionDelay: `${delay}ms` }}
+            style={style}
         >
             {children}
         </Tag>

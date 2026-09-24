@@ -1,6 +1,9 @@
 .reveal {
     opacity: 0;
-    transform: translateY(32px);
+    /* Defaults to the original vertical-only slide-up. A caller can
+       override --reveal-x/--reveal-y (see Reveal.tsx's offsetX/offsetY
+       props) for a different entrance direction, e.g. a horizontal slide. */
+    transform: translate(var(--reveal-x, 0px), var(--reveal-y, 32px));
     transition: opacity var(--duration-reveal) var(--ease-out-expo),
                 transform var(--duration-reveal) var(--ease-out-expo);
     will-change: opacity, transform;
@@ -8,7 +11,7 @@
 
 .reveal.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate(0, 0);
 }
 
 @media (prefers-reduced-motion: reduce) {
